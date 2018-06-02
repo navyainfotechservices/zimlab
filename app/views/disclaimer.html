@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>ZIM - Zeal & Innovation in Medicine</title>
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom fonts for this template -->
+        <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <!-- Custom styles for this template -->
+        <link href="css/full-slider.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="css/grayscale.min.css" rel="stylesheet">
+        <link href="css/custom.css" rel="stylesheet">
+        <link href="css/custom-2.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/responsive.css">
+        <link href="css/infinite-slider.css" rel="stylesheet">
+		
+    </head>
+	<script>
+	function includeHTML() {
+	  var z, i, elmnt, file, xhttp;
+	  /*loop through a collection of all HTML elements:*/
+	  z = document.getElementsByTagName("*");
+	  for (i = 0; i < z.length; i++) {
+		elmnt = z[i];
+		/*search for elements with a certain atrribute:*/
+		file = elmnt.getAttribute("w3-include-html");
+		if (file) {
+		  /*make an HTTP request using the attribute value as the file name:*/
+		  xhttp = new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+			if (this.readyState == 4) {
+			  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+			  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+			  /*remove the attribute, and call this function once more:*/
+			  elmnt.removeAttribute("w3-include-html");
+			  includeHTML();
+			}
+		  }      
+		  xhttp.open("GET", file, true);
+		  xhttp.send();
+		  /*exit the function:*/
+		  return;
+		}
+	  }
+	};
+	</script>
+    <body id="page-top" class="infrastructure">
+ <!-- Navigation -->
+		<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container-fluid">
+				<a class="navbar-brand js-scroll-trigger" href="index.html"><img src="images/logo.png" alt=""></a>
+                <a class="navbar-brand-white js-scroll-trigger" href="index.html"><img src="images/white-logo.png" alt=""></a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fa fa-bars"></i>
+                </button>
+				<div w3-include-html="views/header.html"></div>
+			</div>
+        </nav>
+		<!-- EndNavigation -->
+        <header>
+           <div class="enquire animatedParent" >
+                <div class="buttons">
+                    <div class="enquire-button animated bounceInRight slower"  data-id="1">
+                        <i class="fa fa-envelope-o"></i>
+                        <b>CONTACT US</b>
+                    </div>
+                </div>
+                <div class="form">
+                    <h3>CONTACT US</h3>
+                    <p>
+                        A drug-delivery solution provider, ZIM Laboratories Limit sfasd targeting patient convenience and adherence.
+                    </p>
+                    <form id="enquire-form">
+                        <input type="text" placeholder="NAME">
+                        <input type="text" placeholder="MOBILE NO">
+                        <input type="text" placeholder="EMAIL ID">
+                        <input type="text" placeholder="MESSAGE">
+                        <button type="submit">SUBMIT</button>
+                    </form>
+                </div>
+            </div>
+        </header>
+        
+        <section>
+            <div class="disclaimer">
+                <p class="heading text-center">ZIM Laboratories Limited - Disclaimer</p>
+                <p class="text-justify">
+                 The information presented by ZIM Laboratories Ltd contained in this website is solely for the purpose of general information. The information on this website is provided "as is" and without any warranty or representation of any kind, expressed or implied, including those of merchantability, fitness for a particular purpose or non-infringement. Zim Laboratories Ltd does not accept any liability for the accuracy, completeness or use of this information. Zim Laboratories Ltd does not assume any obligation to update the documents and information available on the website. The access and use of this website and the content thereof is at the user’s own risk.
+<br><br>
+In no event shall ZIM LABORATORIES LTD or its affiliates be liable for any injury or any direct, indirect, incidental, consequential or punitive damages, lost profits, lost data or any other loss or damage arising out of your access to, or inability to access, this website or from your reliance on any information provided herein even if ZIM LABORATORIES LTD or an affiliate has been informed of the possibility thereof. This limitation includes damages or any viruses, which may affect your computer.
+<br><br>
+All product names (whether or not appearing in large print or with a trademark symbol), logos, trademarks, and service marks are trademarks (collectively the “Trademarks”) of ZIM LABORATORIES LTD or its licensees, or other third parties. Except as permitted above or to identify a product, company or service, no use of any Trademark, trade name or trade dress displayed on this Web site may be made without the express and prior written permission of ZIM LABORATORIES LTD or such third party.
+<br><br>
+Nothing contained in this Web site shall be construed as granting or conferring any license or right, express or implied, in, to or under any Trademark, trade name, trade dress, copyright, patent or proprietary right of ZIM LABORATORIES LTD or any third party.
+<br><br>
+You should not use this site or any of the fax, email, and mailing addresses appearing on it to send ZIM LABORATORIES LTD confidential or proprietary information. Data received that is not personal, including questions, comments, ideas, and suggestions, shall be deemed to be non-confidential, and ZIM LABORATORIES LTD shall be free to disclose and use it.
+<br><br>
+Through this website you may link to other websites which are not under the control of ZIM Laboratories Ltd. We have no control over the nature, content and availability of those sites. The inclusion of any links does not necessarily imply a recommendation or endorse the views expressed within them.
+<br><br>
+Every effort is made to keep the website up and running smoothly. However, ZIM Laboratories Ltd. takes no responsibility for, and will not be liable for, the website being temporarily unavailable due to technical issues beyond our control.
+                </p>
+            </div>
+        </section>
+       <!-- Footer Section-->
+		<div w3-include-html="views/footer.html"></div>
+		<!-- End Footer Section-->
+       	
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog " role="document">
+    <div class="modal-content popup-menu">
+      <button type="button" class="close menu-pop-cls-btn" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div w3-include-html="views/menu.html"></div>
+    </div>
+  </div>
+</div>
+		
+		
+        <script>
+		includeHTML();
+		</script>
+        
+        <!-- Bootstrap core JavaScript -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+		<script src="js/slick.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script>
+			$(document).ready(function(){
+			  $('.customer-logos').slick({
+				slidesToShow: 6,
+				slidesToScroll: 1,
+				autoplay: true,
+				autoplaySpeed: 1000,
+				arrows: false,
+				dots: false,
+				pauseOnHover: false,
+				responsive: [{
+				  breakpoint: 768,
+				  settings: {
+					slidesToShow: 4
+				  }
+				}, {
+				  breakpoint: 520,
+				  settings: {
+					slidesToShow: 3
+				  }
+				}]
+			  });
+			});
+		</script>
+        <!-- Plugin JavaScript -->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+        <!-- Custom scripts for this template -->
+        <script src="js/grayscale.min.js"></script>
+		<script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
+        
+        <script src="js/custom-2.js"></script>
+		
+    </body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>ZIM - Zeal & Innovation in Medicine</title>
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom fonts for this template -->
+        <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <!-- Custom styles for this template -->
+        <link href="css/full-slider.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="css/grayscale.min.css" rel="stylesheet">
+        <link href="css/custom.css" rel="stylesheet">
+        <link href="css/custom-2.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/responsive.css">
+        <link href="css/infinite-slider.css" rel="stylesheet">
+		
+    </head>
+	<script>
+	function includeHTML() {
+	  var z, i, elmnt, file, xhttp;
+	  /*loop through a collection of all HTML elements:*/
+	  z = document.getElementsByTagName("*");
+	  for (i = 0; i < z.length; i++) {
+		elmnt = z[i];
+		/*search for elements with a certain atrribute:*/
+		file = elmnt.getAttribute("w3-include-html");
+		if (file) {
+		  /*make an HTTP request using the attribute value as the file name:*/
+		  xhttp = new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+			if (this.readyState == 4) {
+			  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+			  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+			  /*remove the attribute, and call this function once more:*/
+			  elmnt.removeAttribute("w3-include-html");
+			  includeHTML();
+			}
+		  }      
+		  xhttp.open("GET", file, true);
+		  xhttp.send();
+		  /*exit the function:*/
+		  return;
+		}
+	  }
+	};
+	</script>
+    <body id="page-top" class="infrastructure">
+        <!-- Navigation -->
+		<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container-fluid">
+				<a class="navbar-brand js-scroll-trigger" href="index.html"><img src="images/logo.png" alt=""></a>
+                <a class="navbar-brand-white js-scroll-trigger" href="index.html"><img src="images/white-logo.png" alt=""></a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fa fa-bars"></i>
+                </button>
+				<div w3-include-html="views/header.html"></div>
+			</div>
+        </nav>
+		<!-- EndNavigation -->
+        <header>
+           <div class="enquire animatedParent" >
+                <div class="buttons">
+                    <div class="enquire-button animated bounceInRight slower"  data-id="1">
+                        <i class="fa fa-envelope-o"></i>
+                        <b>CONTACT US</b>
+                    </div>
+                </div>
+                <div class="form">
+                    <h3>CONTACT US</h3>
+                    <p>
+                        A drug-delivery solution provider, ZIM Laboratories Limit sfasd targeting patient convenience and adherence.
+                    </p>
+                    <form id="enquire-form">
+                        <input type="text" placeholder="NAME">
+                        <input type="text" placeholder="MOBILE NO">
+                        <input type="text" placeholder="EMAIL ID">
+                        <input type="text" placeholder="MESSAGE">
+                        <button type="submit">SUBMIT</button>
+                    </form>
+                </div>
+            </div>
+        </header>
+        
+        <section>
+            <div class="text-center site-updating">
+                <img src="images/site-updating.png" alt="ssite-updating">
+                <p>
+                    SITE UPDATING<br>
+                    
+                </p>
+                <a href="index.html" class="btn btn-home">Back Home</a>
+
+            </div>
+        </section>
+       
+        <!-- Footer Section-->
+		<div w3-include-html="views/footer.html"></div>
+		<!-- End Footer Section-->
+       	
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog " role="document">
+    <div class="modal-content popup-menu">
+      <button type="button" class="close menu-pop-cls-btn" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div w3-include-html="views/menu.html"></div>
+    </div>
+  </div>
+</div>
+		
+		
+        <script>
+		includeHTML();
+		</script>
+        
+        <!-- Bootstrap core JavaScript -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+		<script src="js/slick.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script>
+			$(document).ready(function(){
+			  $('.customer-logos').slick({
+				slidesToShow: 6,
+				slidesToScroll: 1,
+				autoplay: true,
+				autoplaySpeed: 1000,
+				arrows: false,
+				dots: false,
+				pauseOnHover: false,
+				responsive: [{
+				  breakpoint: 768,
+				  settings: {
+					slidesToShow: 4
+				  }
+				}, {
+				  breakpoint: 520,
+				  settings: {
+					slidesToShow: 3
+				  }
+				}]
+			  });
+			});
+		</script>
+        <!-- Plugin JavaScript -->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+        <!-- Custom scripts for this template -->
+        <script src="js/grayscale.min.js"></script>
+		<script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
+        
+        <script src="js/custom-2.js"></script>
+		
+    </body>
+</html>

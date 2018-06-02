@@ -1,0 +1,167 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Create Financial Year</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Basic Form Elements
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form role="form">
+                            <div class="form-group">
+                                <label>Financial Year</label>
+                                <input class="form-control" ng-model="financialYear.year" placeholder="Enter text">
+                                <!-- <p class="help-block">Example block-level help text here.</p> -->
+                            </div>
+
+                            <div class="form-group">
+                                <label>Is this current Year</label>
+                                <select name="singleSelect" ng-model="financialYear.isCurrentYear">
+                                    <option value="true">true</option>
+                                    <option value="false">false</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Revenue</label>
+                                <input class="form-control" ng-model="financialYear.revenue" placeholder="Enter value">
+                                <!-- <p class="help-block">Example block-level help text here.</p> -->
+                            </div>
+
+                            <div class="form-group">
+                                <label>Operating Cost</label>
+                                <input class="form-control" ng-model="financialYear.operatingCost" placeholder="Enter text">
+                                <!-- <p class="help-block">Example block-level help text here.</p> -->
+                            </div>
+
+                            <div class="form-group">
+                                <label>ebitda Margin</label>
+                                <input class="form-control" ng-model="financialYear.ebitdaMargin" placeholder="Enter text">
+                                <!-- <p class="help-block">Example block-level help text here.</p> -->
+                            </div>
+
+                            <div class="form-group">
+                                <label>ebitda</label>
+                                <input class="form-control" ng-model="financialYear.ebitda" placeholder="Enter text">
+                                <!-- <p class="help-block">Example block-level help text here.</p> -->
+                            </div>
+
+                            <!-- Quarter 1 -->
+
+                            <div class="form-group">
+                                <label>Quarter 1</label>
+                                <input class="form-control" ng-model="financialYear.quarters[0].quartersNumber" placeholder="Enter text">
+                                <!-- <p class="help-block">Example block-level help text here.</p> -->
+                            </div>
+
+                            <div class="form-group">
+                                <label>Revenue</label>
+                                <input class="form-control" ng-model="financialYear.quarters[0].revenue" placeholder="Enter value">
+                                <!-- <p class="help-block">Example block-level help text here.</p> -->
+                            </div>
+
+                            <div class="form-group">
+                                <label>Operating Cost</label>
+                                <input class="form-control" ng-model="financialYear.quarters[0].operatingCost" placeholder="Enter text">
+                                <!-- <p class="help-block">Example block-level help text here.</p> -->
+                            </div>
+
+                            <div class="form-group">
+                                <label>ebitda Margin</label>
+                                <input class="form-control" ng-model="financialYear.quarters[0].ebitdaMargin" placeholder="Enter text">
+                                <!-- <p class="help-block">Example block-level help text here.</p> -->
+                            </div>
+
+                            <div class="form-group">
+                                <label>ebitda</label>
+                                <input class="form-control" ng-model="financialYear.quarters[0].ebitda" placeholder="Enter text">
+                                <!-- <p class="help-block">Example block-level help text here.</p> -->
+                            </div>
+
+
+                            <!-- Quarter 2 -->
+
+                            <div class="form-group">
+                                <label>Quarter 2</label>
+                                <input class="form-control" ng-model="financialYear.quarters[1].quartersNumber" placeholder="Enter text">
+                                <!-- <p class="help-block">Example block-level help text here.</p> -->
+                            </div>
+
+                            <div class="form-group">
+                                <label>Revenue</label>
+                                <input class="form-control" ng-model="financialYear.quarters[1].revenue" placeholder="Enter value">
+                                <!-- <p class="help-block">Example block-level help text here.</p> -->
+                            </div>
+
+                            <div class="form-group">
+                                <label>Operating Cost</label>
+                                <input class="form-control" ng-model="financialYear.quarters[1].operatingCost" placeholder="Enter text">
+                                <!-- <p class="help-block">Example block-level help text here.</p> -->
+                            </div>
+
+                            <div class="form-group">
+                                <label>ebitda Margin</label>
+                                <input class="form-control" ng-model="financialYear.quarters[1].ebitdaMargin" placeholder="Enter text">
+                                <!-- <p class="help-block">Example block-level help text here.</p> -->
+                            </div>
+
+                            <div class="form-group">
+                                <label>ebitda</label>
+                                <input class="form-control" ng-model="financialYear.quarters[1].ebitda" placeholder="Enter text">
+                                <!-- <p class="help-block">Example block-level help text here.</p> -->
+                            </div>
+
+
+                            <!-- Quarter 3 -->
+
+                            <div class="form-group">
+                                <label>Quarter 3</label>
+                                <input class="form-control" ng-model="financialYear.quarters[2].quartersNumber" placeholder="Enter text">
+                                <!-- <p class="help-block">Example block-level help text here.</p> -->
+                            </div>
+
+                            <div class="form-group">
+                                <label>Revenue</label>
+                                <input class="form-control" ng-model="financialYear.quarters[2].revenue" placeholder="Enter value">
+                                <!-- <p class="help-block">Example block-level help text here.</p> -->
+                            </div>
+
+                            <div class="form-group">
+                                <label>Operating Cost</label>
+                                <input class="form-control" ng-model="financialYear.quarters[2].operatingCost" placeholder="Enter text">
+                                <!-- <p class="help-block">Example block-level help text here.</p> -->
+                            </div>
+
+                            <div class="form-group">
+                                <label>ebitda Margin</label>
+                                <input class="form-control" ng-model="financialYear.quarters[2].ebitdaMargin" placeholder="Enter text">
+                                <!-- <p class="help-block">Example block-level help text here.</p> -->
+                            </div>
+
+                            <div class="form-group">
+                                <label>ebitda</label>
+                                <input class="form-control" ng-model="financialYear.quarters[2].ebitda" placeholder="Enter text">
+                                <!-- <p class="help-block">Example block-level help text here.</p> -->
+                            </div>
+
+                            <button type="submit" class="btn btn-default" ng-click="saveFinancialYear(financialYear);">Submit Button</button>
+                            <button type="reset" class="btn btn-default" ng-click="reset();">Reset Button</button>
+                            <button class="btn btn-default" ng-click="goBack();">cancel</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>

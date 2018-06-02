@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "portfolio-176818",
+  "private_key_id": "3bd52b466eebb3050d269a574f035eea8d0bf6bb",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDtvdLfHmo4IUK6\nFmBEuiNpL6j7OMCr4LGcstLve0AuM/ob2MvnnvvXU8bayGn3KVg9dEsDpH5jsAsM\nmc2xpTjDKmPXx2wYweREidzVVgnqRVRvjvWYxmfIb7GIwfxexTD35tE4Xa9HCY9x\nJoeRhXm733FJ9xgehnhPLNYdnee8dhcLn7zSh7btv00Xm5WEkn//jgwj4+Rx7tXE\nF5kgzx5zNZsvS+AZ2QDP98ZQfn3kJwIEU4GVRr7gPsnuTtIG45RPODCMDG3NI8zb\nB4S32oBDEyIYLuU4fhLfkeAkV9dMO9337Q4fUYKQTLsyRvImsYUIh5cJ4NYeXDim\nq64GAsvdAgMBAAECggEACYWCekqkzOoyGrNWODJvRCFzRlp7xvZ5DpJP5eT9CUyu\nHerlIbnpkrJpgq4npk062j072uG96R6uFptbVFvOZeye8o+rWeN8Ea2m0UmAnKgZ\nrV0fo3aAxhOJG/XO9nm10Bvnsbb40+LDYq/9Gnwqx7Y3epOhnOlcTKl6StXd59uM\nJlznFOa5dlN15pE2fFrmr8tdjg7DJRfaasYkQRuP90aasQDT6jHyjv3mizM3/8il\ngJL669lrodg3pZiBpsiVTVDVgle5L1jVYH6Blr91YeiRQ+4EHYJMoi8QAAIPcmqN\n4oSH2m3ZkYW2+ec89WrNRmsM6ujSUiXRp+3uvJIjIQKBgQD3qcUxcCq/GBPPWels\nDck3pFrH2IdQHFm1R91IL/XYnJi1QifwNjDFUk+T8A9DEa0X7uN7lYCBz4MuIB5k\nL2DY/lc+vMwFrW5j1DDrzIHir17apJUYKCV60c6yJag2IyX5pL9Ct9Sbx7cjO5BC\nZ1o6O5jGmpf0GvSDZvUamO3noQKBgQD1vo3EVprdvVfJIaHFb+vUZQvH00R4EFWP\nBtENAlM01ae0ANcWx0OaLVFwCD0tBV/SHiskIQxwlfQOhcfAf0shJny/EzveZneT\nql0pGOO1m4MCCFwuG1nrz9vJ8YNg1vZoean3fj337/wHI9N/IuvXOgpoXuyxDf+J\nlB6UKEKKvQKBgHOstc+7hhuvEUGdyyqO3dbBSy1gcwL12uiS4kXfMMK1kZXHioPl\nq63eHhEI5Pf8f45YI6QLVfRLige3NLqyblero/BHmjtkn9S8vQTFhjzskC8rBAA+\ncBMHf7UxZXmzvP729eYhmooQI/eu0FhTkY71WwwYFLUNCft90SlVGHlBAoGBAJD2\nq6JahFixzQs0770MXM2aHezuz8ETwaTxnHhUGslcD+W7aSZivZpBiXzRH2Vjejb0\n3PYfGLuBecrnWAJSFPulPIlqyzJSt88//Fy19f23kvyr+dSpBc55e2oRMjL6G7ld\nq8n3io6r3rxHggfJjd4Uuvb+qBl57Hg4DCHR7g7xAoGAAeEpONKhaKkmPl5NxjMP\nGv3E72fNXFzjWHI3Hy+GylJn85p+w/rOMj9h2mm2WoAzzVEXf/Cd3Zo5WAR3mZS3\n/QA5B0lGjhNZsxf/LPg9goBkaq1W0QbwTnbRQc/KtWB+i1XVfsOrsrSzb4PtBCIg\ntZYFo0Wtdi56oHIDxRrpJJU=\n-----END PRIVATE KEY-----\n",
+  "client_email": "zim-lab@portfolio-176818.iam.gserviceaccount.com",
+  "client_id": "104128564601376497380",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/zim-lab%40portfolio-176818.iam.gserviceaccount.com"
+}

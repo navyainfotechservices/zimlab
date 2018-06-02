@@ -1,0 +1,64 @@
+<div>
+    <!-- In case of single file -->
+    <div class="clearfix file-view-multiple" ng-if="!multiple && model">
+        <div class="img-box">
+            <span>
+                <i class="fa fa-remove close-file" ng-click="removeFiles($index,model)"></i>
+                <a ng-if="model != 'broken'" href="{{model|uploadPath}}" target="_blank">
+                    <img alt="{{model}}" ng-src="{{model|uploadPath}}" class="img-size-single" />
+                </a>
+            </span>
+        </div>
+    </div>
+</div>
+
+<!-- In case of multiple files -->
+<div class="clearfix file-view-multiple" ng-if="multiple && model.length">
+    <div class="img-box" ng-repeat="file in model track by $index">
+        <span>
+            <i class="fa fa-remove close-file" ng-click="removeFiles($index,file,true)"></i>
+            <a ng-if="model != 'broken'" href="{{file|uploadPath}}" target="_blank">
+                <img alt="{{file}}" ng-src="{{file|uploadpPath}}" class="img-size" />
+            </a>
+        </span>
+    </div>
+</div>
+
+<!-- button to select file/files -->
+<!-- style="width: 19em;height:3em" -->
+<div ng-hide="disabled" class="upload-btn">
+    <div class="file-upload">
+        <div class="file-select">
+            <div class="file-select-button" id="fileName">Choose File</div>
+            <div class="file-select-name" id="noFile">No file chosen...</div>
+            <input type="file" ng-model="files" ng-if="!multiple" onchange="angular.element(this).scope().uploadImage(files)" name="chooseFile"
+                id="chooseFile">
+            <input type="file" ng-model="files" ng-if="multiple" onchange="angular.element(this).scope().uploadImage(files)" name="chooseFiles"
+                id="chooseFiles" multiple/>
+        </div>
+    </div>
+</div>
+
+<!-- Information -->
+<span>Maximum upload file size: 10 MB.</span>
+
+<!-- Show Error uploading files here -->
+<!-- |strLimit:0:12 -->
+<div class="well well-sm bg-danger well-border" ng-if="errorFiles" ng-repeat="file in errorFiles track by $index">{{file.name }} (
+    <span ng-switch="file.size > 1024*1024">
+        <span ng-switch-when="true">{{file.size / 1024 / 1024 | number:2}} MB</span>
+        <span ng-switch-default>{{file.size / 1024 | number:2}} kB</span>
+    </span>) | Error:
+    <span ng-bind-html="file.reason"></span>
+    <a ng-click="removeError($index)">
+        <i class="fa fa-remove close-well"></i>
+    </a>
+</div>
+
+<!-- Show progress bar  -->
+<div ng-show="progressVisible">
+    <div class="percent">{{progress}}%</div>
+    <div class="progress progress-sm progress-striped active bg-tr-black lt">
+        <div class="progress-bar bg-cyan" role="progressbar" ng-style="{ 'width': progress + '%' }"></div>
+    </div>
+</div>

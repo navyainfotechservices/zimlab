@@ -1,0 +1,50 @@
+.firstBlur, .secondBlur, .imgBlur {
+  margin: 50px 20px 0;
+  border: solid 1px black;
+  padding: 20px;
+  position: relative;
+}
+
+.secondBlur .overlay {
+  background-color: #bf6363;
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  filter: opacity(0.5);
+  filter: blur(20px);
+}
+
+.secondBlur .card {
+  display: block;
+  border: solid 1px blue;
+  width: 300px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.secondBlur .someText {
+  margin-top: 30px;
+}
+
+.imgBlur img {
+  width: 600px;
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+}
+
+/* === CSS FILTER EFFECTS === */
+.firstBlur.modalBlur > *:not(.modal) {
+  -webkit-filter: blur(8px);
+}
+
+.firstBlur.modalDesaturate > *:not(.modal) {
+  -webkit-filter: saturate(0%);
+}
+
+/* === SOFTEN THE MODAL BACKDROP SO THE EFFECT IS MORE VISIBLE === */
+.modal-backdrop {
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+}

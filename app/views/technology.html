@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <title>ZIM - Zeal & Innovation in Medicine</title>
+        <script>
+            function includeHTML() {
+              var z, i, elmnt, file, xhttp;
+              /*loop through a collection of all HTML elements:*/
+              z = document.getElementsByTagName("*");
+              for (i = 0; i < z.length; i++) {
+            	elmnt = z[i];
+            	/*search for elements with a certain atrribute:*/
+            	file = elmnt.getAttribute("w3-include-html");
+            	if (file) {
+            	  /*make an HTTP request using the attribute value as the file name:*/
+            	  xhttp = new XMLHttpRequest();
+            	  xhttp.onreadystatechange = function() {
+            		if (this.readyState == 4) {
+            		  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+            		  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+            		  /*remove the attribute, and call this function once more:*/
+            		  elmnt.removeAttribute("w3-include-html");
+            		  includeHTML();
+            		}
+            	  }      
+            	  xhttp.open("GET", file, true);
+            	  xhttp.send();
+            	  /*exit the function:*/
+            	  return;
+            	}
+              }
+            };
+        </script>
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom fonts for this template -->
+        <link rel="stylesheet" href="vendor/droid/stylesheet.css">
+        <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
+        <!-- Plugin CSS -->
+        <link href="css/resCarousel.css" rel="stylesheet" type="text/css">
+        <link href="css/accordian.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/dataTables.bootstrap4.min.css">
+        <link rel="stylesheet" href="css/dataTables.responsive.css">
+        <!-- Custom styles for this template -->
+        <link rel="stylesheet" type="text/css" href="css/tabs.css">
+        <link rel="stylesheet" type="text/css" href="css/zimlab.min.css">
+        <script src="js/highcharts.js"></script>
+        <!--<script src="https://code.highcharts.com/highcharts-3d.js"></script>
+            <script src="https://code.highcharts.com/modules/exporting.js"></script>
+            <script src="https://code.highcharts.com/modules/export-data.js"></script>-->
+    </head>
+    <body>
+        <div class="firstBlur main-container">
+            <!-- Navigation -->
+            <div class="navbar navbar-expand-lg navbar-light fixed-top">
+			<div class="container">
+				<div class="flyout hidden">
+					<nav>
+					<div class="wrapper resize-drag topnav-wrapper">
+						<ul class="nav-ul">
+						<li><a href="about-us.html">About Us</a></li>
+						<li><a ui-sref="product">Products</a></li>
+						<li><a href="infrastructure.html">Infrastructure</a></li>
+						<li><a href="technology.html">TECHNOLOGY / R&D</a></li>
+						<li><a ui-sref="corporate-information">Corporate Information</a></li>
+						<li><a href="coming-soon.html">Investors</a></li>
+						<li><a href="diversified-customers-countries.html">Diversified Customers & Countries</a></li>
+						<li><a href="co-developement_partnership.html">Co Developement & Partnerships</a></li>
+						<li><a href="career.html">Careers</a></li>
+						<li><a href="https://zimlabs.blogspot.in/" target="_blank">Media Kit</a></li>
+						<li><a href="contact-us.html">Contact US</a></li>
+					  </ul>
+					</div>
+					</nav>
+					</div>
+            </div>
+			<div class="opener hidden" id="mainNav">
+                <nav>
+                    <ul class="nav-ul-1">
+                        <li><a ui-sref="corporate-information">Corporate Information</a></li>
+                        <li><a href="technology.html">TECHNOLOGY / R&D</a></li>
+                        <li><a ui-sref="product">Products</a></li>
+                        <li><a><span class="toggle"></span></a></li>
+                    </ul>
+                </nav>
+				
+				<div class="navbar-brand-white js-scroll-trigger">
+					<a href="index.html"><img src="images/zim-logo-white.png" alt=""/></a>
+				</div>
+				<div class="navbar-brand js-scroll-trigger">
+					<a href="index.html"><img src="images/zim-logo-green.png" alt=""/></a>
+				</div>
+			</div>
+		</div>
+            <!-- End Navigation --> 
+            <!-- Header -->
+            <header class="page-header-banner technology-banner">
+                <h1 class="white">TECHNOLOGY</h1>
+            </header>
+            <!-- End Header --> 
+            <!-- Intro Copy -->
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 text-right" data-id="1">
+                            <p class="green big text-right margin0">Introducing</p>
+                            <h3 class="green">THINORAL &reg; TECHNOLOGY</h3>
+                            <p class="big text-right margin0"><b>FAST DISSOLVING ORAL THIN FILM</b></p>
+                            <p class="big text-right">A UNIQUE DRUG DELIVERY SYSTEM</p>
+                        </div>
+                        <div class="col-lg-6 text-justify" data-id="2">
+                            <p>Conventional oral solid dosage forms like tablets and capsules in spite of their several advantages and resultant popularity suffer from one great disadvantage, i.e., they have to be swallowed preferably with water or any other liquid. Voluntary swallowing is a hindrance in drug administration for children, elderly, mentally challenged, nauseated, unconscious and bed ridden patients.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-lg-12 text-and-banner better-text-ban">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End Intro Copy --> 
+            <!--GROWTH INITIATIVES-->
+            <section>
+                <h4>DELIVERY PLATFORMS <span>THERAPEUTIC NEUTRAL PRODUCTS</span></h4>
+                <div class="container-fluid">
+                    <div class="tab_wrapper first_tab type2-tab">
+                        <ul class="tab_list">
+                            <li class="active">THINORAL TECHNOLOGY</li>
+                            <li>DIRECTLY COMPRESSIBLE GRANULES</li>
+                            <li>TASTE MASKING</li>
+                            <li>PELLETS-IN DIFFERENT RELEASE PATTERNS</li>
+                        </ul>
+                        <div class="content_wrapper container">
+                            <div class="tab_content active">
+                                <div class="resCarousel margin-t25" data-items="1-2-3-3" data-slide="1" data-speed="900" data-animator="lazy">
+                                    <div class="resCarousel-inner">
+                                        <div class="item">
+                                            <div class="bf tile text-center">
+                                                <div class="image-outer">
+                                                    <div class="image"> <img src="images/otf-sign.png" alt="thin film"> </div>
+                                                </div>
+                                                <div class="text">
+                                                    <p> Oral Thin Films (OTF) is the latest addition to ZIM's stable.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="bf tile text-center">
+                                                <div class="image-outer">
+                                                    <div class="image"> <img src="images/global-sign.png" alt="thin film"> </div>
+                                                </div>
+                                                <div class="text">
+                                                    <p> It is one of the few
+                                                        companies globally
+                                                        and one of the very
+                                                        few companies in India
+                                                        to have mastered the
+                                                        OTF technology. 
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="bf tile text-center">
+                                                <div class="image-outer">
+                                                    <div class="image"> <img src="images/patented-sign.png" alt="thin film"> </div>
+                                                </div>
+                                                <div class="text">
+                                                    <p> ZIM Oral Thin Film (OTF) Technology is patented as Thinoral&reg; 
+                                                        with about 19 applied product/proccess patents for oral films globally. 
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="bf tile text-center">
+                                                <div class="image-outer">
+                                                    <div class="image"> <img src="images/approval-sign.png" alt="thin film"> </div>
+                                                </div>
+                                                <div class="text">
+                                                    <p> It has received 24 DCGI
+                                                        product approvals & is
+                                                        awaiting 14 in India and
+                                                        13 product approvals
+                                                        overseas. 
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="bf tile text-center">
+                                                <div class="image-outer">
+                                                    <div class="image"> <img src="images/thinoral5.png" alt="thin film"> </div>
+                                                </div>
+                                                <div class="text">
+                                                    <p> Its rapidly dissolving,
+                                                        non-sticky films have a drug
+                                                        loading capacity as high
+                                                        as 100 mg of the active drug.
+                                                        The faster release profile
+                                                        alleviates solubility issues
+                                                        in poorly soluble drugs. 
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="bf tile text-center">
+                                                <div class="image-outer">
+                                                    <div class="image"> <img src="images/thinoral6.png" alt="thin film"> </div>
+                                                </div>
+                                                <div class="text">
+                                                    <p> Unlike orally disintegrating
+                                                        tablets that are manufactured
+                                                        using lyophilisation or low
+                                                        compression pressure,
+                                                        the Thinoral® strips are
+                                                        flexible and offer ease of
+                                                        storage and transportation. 
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="bf tile text-center">
+                                                <div class="image-outer">
+                                                    <div class="image"> <img src="images/thinoral7.png" alt="thin film"> </div>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Thinoral® technology
+                                                        could also be used for
+                                                        delivery of drugs through
+                                                        sublingual and buccal
+                                                        absorption routes, showing
+                                                        improved bioavailability
+                                                        by avoiding first pass
+                                                        metabolism. 
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-default leftRs"></button>
+                                    <button class="btn btn-default rightRs"></button>
+                                </div>
+                            </div>
+                            <div class="tab_content">
+                                <div class="resCarousel margin-t25" data-items="1-2-3-3" data-slide="1" data-speed="900" data-animator="lazy">
+                                    <div class="resCarousel-inner">
+                                        <div class="item">
+                                            <div class="bf tile text-center">
+                                                <div class="image-outer">
+                                                    <div class="image"> <img src="images/capsules.png" alt="thin film"> </div>
+                                                </div>
+                                                <div class="text">
+                                                    <p> Pelletization, a niche
+                                                        technology, requires
+                                                        adoption of unique
+                                                        manufacturing process.
+                                                        Instead of the formulation
+                                                        being produced in powder
+                                                        form, the end product is
+                                                        in the form of fine micro
+                                                        granules called pellets. 
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="bf tile text-center">
+                                                <div class="image-outer">
+                                                    <div class="image"> <img src="images/pellets2.png" alt="thin film"> </div>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Pellets give control on the
+                                                        time of release of the
+                                                        dosage, in the required
+                                                        quantities in the body.
+                                                        The pellets are
+                                                        administered in capsules. 
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="bf tile text-center">
+                                                <div class="image-outer">
+                                                    <div class="image"> <img src="images/pellets3.png" alt="thin film"> </div>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Sustained Release
+                                                        capsules are to be taken
+                                                        less than conventional
+                                                        dosage forms. 
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="bf tile text-center">
+                                                <div class="image-outer">
+                                                    <div class="image"> <img src="images/pellets4.png" alt="thin film"> </div>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Dosage is released from the
+                                                        stomach in the body in the
+                                                        required proportion at the
+                                                        appropriate time of the day
+                                                        when it is required to be
+                                                        released, depending upon
+                                                        the typical disease. 
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="bf tile text-center">
+                                                <div class="image-outer">
+                                                    <div class="image"> <img src="images/pellets5.png" alt="thin film"> </div>
+                                                </div>
+                                                <div class="text">
+                                                    <p> Added advantage to patients
+                                                        as they are not required to
+                                                        remember the timing
+                                                        for building up the required
+                                                        dosage in the human body. 
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-default leftRs"></button>
+                                    <button class="btn btn-default rightRs"></button>
+                                </div>
+                            </div>
+                            <div class="tab_content">
+                                <div class="resCarousel margin-t25" data-items="1-2-3-3" data-slide="1" data-speed="900" data-animator="lazy">
+                                    <div class="resCarousel-inner">
+                                        <div class="item">
+                                            <div class="bf tile text-center">
+                                                <div class="image-outer">
+                                                    <div class="image"> <img src="images/taste1.png" alt="thin film"> </div>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Taste-masking techniques
+                                                        are applied to mask or
+                                                        overcome the bitter or
+                                                        unpleasant taste of active
+                                                        pharmaceutical ingredients /
+                                                        drugs to achieve
+                                                        patient acceptability
+                                                        and compliance. 
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="bf tile text-center">
+                                                <div class="image-outer">
+                                                    <div class="image"> <img src="images/taste2.png" alt="thin film"> </div>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Oral administration of
+                                                        bitter or unpleasant
+                                                        tasting drugs is often the
+                                                        biggest barrier for patient
+                                                        groups, such as paediatrics
+                                                        and geriatrics. 
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="bf tile text-center">
+                                                <div class="image-outer">
+                                                    <div class="image"> <img src="images/key3.png" alt="thin film"> </div>
+                                                </div>
+                                                <div class="text">
+                                                    <p>ZIM has mastered this
+                                                        technology to make it
+                                                        not only cost effective,
+                                                        but also to taste mask
+                                                        bitter products including
+                                                        antibiotics, without affecting
+                                                        their shelf life while maintaining
+                                                        their dissolution and
+                                                        bio-availability requirements. 
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-default leftRs"></button>
+                                    <button class="btn btn-default rightRs"></button>
+                                </div>
+                            </div>
+                            <div class="tab_content">
+                                <div class="resCarousel margin-t25" data-items="1-2-3-3" data-slide="1" data-speed="900" data-animator="lazy">
+                                    <div class="resCarousel-inner">
+                                        <div class="item">
+                                            <div class="bf tile text-center">
+                                                <div class="image-outer">
+                                                    <div class="image"> <img src="images/directly1.png" alt="thin film"> </div>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Dry/Wet granulation and
+                                                        direct compression are
+                                                        the two methods for
+                                                        preparation of tablets. 
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="bf tile text-center">
+                                                <div class="image-outer">
+                                                    <div class="image"> <img src="images/directly2.png" alt="thin film"> </div>
+                                                </div>
+                                                <div class="text">
+                                                    <p>The prime advantage of
+                                                        direct compression over
+                                                        wet granulation is cost, since
+                                                        the latter requires fewer unit
+                                                        operations. This means
+                                                        less equipment, lower power
+                                                        consumption, less space,
+                                                        time and labour leading to
+                                                        reduced production
+                                                        cost of tablets. 
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="bf tile text-center">
+                                                <div class="image-outer">
+                                                    <div class="image"> <img src="images/directly3.png" alt="thin film"> </div>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Direct compression is
+                                                        more suitable for moisture
+                                                        and heat sensitive APIs since
+                                                        it eliminates wetting and
+                                                        drying steps and increases
+                                                        the stability of active
+                                                        ingredients by reducing
+                                                        detrimental effects. 
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="bf tile text-center">
+                                                <div class="image-outer">
+                                                    <div class="image"> <img src="images/directly4.png" alt="thin film"> </div>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Changes in dissolution
+                                                        profiles are less likely to
+                                                        occur in tablets made by
+                                                        direct compression on
+                                                        storage than in those
+                                                        made from granulations 
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="bf tile text-center">
+                                                <div class="image-outer">
+                                                    <div class="image"> <img src="images/directly5.png" alt="thin film"> </div>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Added advantage to patients
+                                                        as they are not required to
+                                                        remember the timing
+                                                        for building up the required
+                                                        dosage in the human body. 
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-default leftRs"></button>
+                                    <button class="btn btn-default rightRs"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="container">
+                    <h4>EVOLUTION OF OTF</h4>
+                    <div class="row">
+                        <div class="col-lg-12 mx-auto margin-b45"><img width="100%" src="images/evolution-of-otf.png" alt="evolution of OTF"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <p class="text-justify"> Conventional oral solid dosage forms like tablets and capsules in spite of their advantages and popularity suffer from one great disadvantage. They have to be swallowed preferably with water or any other liquid. </p>
+                        </div>
+                        <div class="col-lg-4">
+                            <p class="text-justify"> Voluntary swallowing is a hindrance in drug administration for children, elderly, mentally challenged, nauseated, unconscious and bed ridden patients. A need for non-obstructive dosage form possessing the other advantages of tablet has been felt constantly by the physicians and patients for many years. </p>
+                        </div>
+                        <div class="col-lg-4">
+                            <p class="text-justify"> The concept of OTF as drug delivering dosage forms evolved as an answer to the need of this section of patients. </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h5>KEY BENEFITS</h5>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="resCarousel " data-items="1-2-3-3" data-slide="1" data-speed="900" data-animator="lazy">
+                                <div class="resCarousel-inner">
+                                    <div class="item">
+                                        <div class="bf tile text-center">
+                                            <div class="image-outer">
+                                                <div class="image"> <img src="images/compliance.png" alt="thin film"> </div>
+                                            </div>
+                                            <div class="text">
+                                                <p> Improved patient
+                                                    compliance with ease
+                                                    of self-administration,
+                                                    storage and transportation. 
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="bf tile text-center">
+                                            <div class="image-outer">
+                                                <div class="image"> <img src="images/water-icon.png" alt="thin film"> </div>
+                                            </div>
+                                            <div class="text">
+                                                <p> Rapid dissolution, no
+                                                    need of water/liquids
+                                                    for administration. 
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="bf tile text-center">
+                                            <div class="image-outer">
+                                                <div class="image"> <img src="images/target-icon.png" alt="thin film"> </div>
+                                            </div>
+                                            <div class="text">
+                                                <p> Accurate and precise
+                                                    dosing. Ability to
+                                                    deliver small doses
+                                                    (milli to nano). 
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="bf tile text-center">
+                                            <div class="image-outer">
+                                                <div class="image"> <img  src="images/emergency-situation.png" alt="thin film"> </div>
+                                            </div>
+                                            <div class="text">
+                                                <p> Relatively more useful
+                                                    in the emergency situations
+                                                    such as emesis, acute
+                                                    pain, motion sickness, etc. 
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="bf tile text-center">
+                                            <div class="image-outer">
+                                                <div class="image"> <img src="images/key1.png" alt="thin film"> </div>
+                                            </div>
+                                            <div class="text">
+                                                <p> Relatively lower dosage
+                                                    required as it avoids the
+                                                    first pass metabolic pathway
+                                                    (when administered
+                                                    sublingually or buccally). 
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="bf tile text-center">
+                                            <div class="image-outer">
+                                                <div class="image"> <img src="images/key2.png" alt="thin film"> </div>
+                                            </div>
+                                            <div class="text">
+                                                <p> Safe and
+                                                    non-invasive. 
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="bf tile text-center">
+                                            <div class="image-outer">
+                                                <div class="image"> <img src="images/key3.png" alt="thin film"> </div>
+                                            </div>
+                                            <div class="text">
+                                                <p> Relatively lower development
+                                                    costs & clinical studies
+                                                    required as compared to
+                                                    developing new chemical
+                                                    entities/drugs. 
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-default leftRs"></button>
+                            <button class="btn btn-default rightRs"></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="content-section big-text-overlay">
+                <h5>OTF DISPERSION FORMS</h5>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="resCarousel carousel-arrows-hide" data-items="1-2-2-2" data-slide="1" data-speed="900" data-animator="lazy">
+                                <div class="resCarousel-inner">
+                                    <div class="item">
+                                        <div class="tile text-center">
+                                            <div class="card bg_image">
+                                                <div class="overlay">
+                                                    <p class="card-title">Conversion of IM/SC injectable dosage forms into Sublingual Formulations</p>
+                                                    <div class="card-text white text-left">
+                                                        <ul>
+                                                            <li>Non invasive mode of administration</li>
+                                                            <li>Proprietary technology and non-infringing process</li>
+                                                            <li>Will be filed as a NDA/ANDA application requiring clinical trails</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <img class="img-fluid" src="images/conversion.jpg" alt="conversion">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="tile text-center">
+                                            <div class="card bg_image">
+                                                <div class="overlay">
+                                                    <p class="card-title">Sublingual/Buccal Films</p>
+                                                    <div class="card-text white text-left">
+                                                        <ul>
+                                                            <li>Alternative for injectable</li>
+                                                            <li>Improved bioavailability as first pass metabolism is avoided</li>
+                                                            <li>Proprietary technology and non-infringing process</li>
+                                                            <li>Can be filed as an ANDA application</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <img class="img-fluid" src="images/sublingual.jpg" alt="sublingual">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-default leftRs"></button>
+                                <button class="btn btn-default rightRs"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h4>AWARD AND RECOGNITION</h4>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-lg-10 mx-auto text-and-banner award-ban">
+                            <div class="row">
+                                <div class="col-lg-5">
+                                    <img src="images/award.png" alt="award">	
+                                </div>
+                                <div class="col-lg-7">
+                                    <p>ZIM's FAST DISSOLVING OTF WAS AWARDED AS THE BEST INNOVATION DEVELOPEMENT OF A SOLID DOSAGE FORM FOR THE YEAR 2016 BY INDIA PHARMACEUTICAL ASSOCIATION.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-center">Thinoral&reg; Awarded Best Innovation Developement of a Solid Dosage Form by IPA. The Technology provides a unique opportunity to Pharmaceutical and Nutraceutial companies to create new brands or extent existing brand with a new dosage form.</p>
+                </div>
+            </section>
+            <section class="padding-top0">
+                <div class="col-lg-12 full-text-and-banner text-and-banner rnd-text-ban">
+                    <p>RESEARCH & DEVELOPMENT</p>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p class="text-center">Thinoral&reg; Awarded Best Innovation Developement of a Solid Dosage Form by IPA. The Technology provides a unique opportunity to Pharmaceutical and Nutraceutial companies to create new brands or extent existing brand with a new dosage form.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h4>R&D TEAM</h4>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p class="text-center margin-t45">ZIM's R&D is led by MD and supported by a professional qualified team of 111 personnel.</p>
+                            <h5>QUALIFICATION</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="resCarousel carousel-arrows-hide margin-t45" data-items="1-2-3-4" data-slide="1" data-speed="900" data-animator="lazy">
+                                <div class="resCarousel-inner">
+                                    <div class="item">
+                                        <div class="bf tile text-center">
+                                            <div class="image-outer">
+                                                <div class="image"> <img src="images/doctrate.png" alt="doctrate"> </div>
+                                            </div>
+                                            <div class="text">
+                                                <p> Doctrate <br>
+                                                    5 
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="bf tile text-center">
+                                            <div class="image-outer">
+                                                <div class="image"> <img src="images/post-graduate.png" alt="post graduate"> </div>
+                                            </div>
+                                            <div class="text">
+                                                <p> Post graduate <br>
+                                                    81 
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="bf tile text-center">
+                                            <div class="image-outer">
+                                                <div class="image"> <img src="images/graduate-icon.png" alt="graduate"> </div>
+                                            </div>
+                                            <div class="text">
+                                                <p> Graduate <br>
+                                                    22 
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="bf tile text-center">
+                                            <div class="image-outer">
+                                                <div class="image"> <img src="images/diploma-icon.png" alt="thin film"> </div>
+                                            </div>
+                                            <div class="text">
+                                                <p> Diploma <br>
+                                                    3 
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-default leftRs"></button>
+                                <button class="btn btn-default rightRs"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h4 class="btm-shadow">R&D PATENTS</h4>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p class="text-center margin-t45">ZIM has filed 37 patents Registered over 170 formulations in various markets (mainly RoW).</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="container">
+                                <div class="tab_wrapper tab_wrapper_2 first_tab">
+                                    <ul class="tab_list">
+                                        <li class="active">PATENT FILLINGS</li>
+										<li >FORMULATION REGISTRATIONS</li>
+                                    </ul>
+                                    <div class="content_wrapper">
+                                        <div class="tab_content active">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-lg-12 inner-table">
+                                                        <table class="table table-bordered table-hover dt-responsive">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th> Dosage Form
+                                                                    </th>
+                                                                    <th> Modified Release
+                                                                    </th>
+                                                                    <th> Dosage Transformation
+                                                                    </th>
+                                                                    <th> Solubility Enhancement
+                                                                    </th>
+                                                                    <th> Taste Masking
+                                                                    </th>
+                                                                    <th> Total
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>OTF</td>
+                                                                    <td>2</td>
+                                                                    <td>4</td>
+                                                                    <td>13 </td>
+                                                                    <td>-</td>
+                                                                    <td>19</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>PELLETS / CAPSULES</td>
+                                                                    <td>9</td>
+                                                                    <td>3</td>
+                                                                    <td>- </td>
+                                                                    <td>-</td>
+                                                                    <td>12</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>SUSPENSIONS</td>
+                                                                    <td>-</td>
+                                                                    <td>-</td>
+                                                                    <td>- </td>
+                                                                    <td>2</td>
+                                                                    <td>2</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>TABLETS</td>
+                                                                    <td>15</td>
+                                                                    <td>11</td>
+                                                                    <td>13</td>
+                                                                    <td>2</td>
+                                                                    <td>41</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab_content">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-lg-12 inner-table">
+                                                        <table class="table table-bordered table-hover dt-responsive">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th> Dosage Form
+                                                                    </th>
+                                                                    <th> Registered
+                                                                    </th>
+                                                                    <th> Applied
+                                                                    </th>
+                                                                    <th> Pipeline
+                                                                    </th>
+                                                                    <th> Total
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Capusles</td>
+                                                                    <td>35</td>
+                                                                    <td>80</td>
+                                                                    <td>36 </td>
+                                                                    <td>151</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>OTF</td>
+                                                                    <td>14</td>
+                                                                    <td>96</td>
+                                                                    <td>58 </td>
+                                                                    <td>168</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Suspension</td>
+                                                                    <td>7</td>
+                                                                    <td>15</td>
+                                                                    <td>11</td>
+                                                                    <td>33</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Tablets</td>
+                                                                    <td>139</td>
+                                                                    <td>177</td>
+                                                                    <td>53 </td>
+                                                                    <td>369</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Others (Gel, Liquid, Sachets)</td>
+                                                                    <td>3</td>
+                                                                    <td>0</td>
+                                                                    <td>1</td>
+                                                                    <td>4</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Total</td>
+                                                                    <td>198</td>
+                                                                    <td>368</td>
+                                                                    <td>159</td>
+                                                                    <td>725</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+			<selection>
+				<h4>ZIM R&D FACILITY</h4>
+				<div class="row">
+					<div class="col-lg-6 padding0"> <img class="img-fluid" src="images/R_D-HPLC---IMG_3041.jpg" alt="hplc"> </div>
+					<div class="col-lg-6 padding0"> <img class="img-fluid" src="images/R_D Lab-IMG_3031.jpg" alt="lab"> </div>
+				  </div>
+			</selection>
+        </div>
+        <div w3-include-html="views/footer.html"></div>
+        <!--footer--> 
+        <!-- Bootstrap core JavaScript --> 
+        <script src="vendor/jquery/jquery.min.js"></script> 
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
+        <!-- Plugin JavaScript --> 
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script> 
+        <script src="js/resCarousel.js"></script> 
+        <script src="https://cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js"></script> 
+        <script src="https://cdn.datatables.net/plug-ins/f2c75b7247b/integration/bootstrap/3/dataTables.bootstrap.js"></script> 
+        <script src="https://cdn.datatables.net/responsive/1.0.4/js/dataTables.responsive.js"></script> 
+        <!--<script src="js/jquery.bootstrap-responsive-tabs.min.js"></script>-->
+        <script src="js/zimlab.js"></script> 
+        <!-- Custom scripts for this template --> 
+        <script src="js/priority-nav.js"></script> 
+        <script type="text/javascript" src="js/jquery.multipurpose_tabcontent.js"></script> 
+        <!--<script src="js/charts.js"></script> 
+        Plug-in Initialisation--> 
+        <script>
+            var wrapper = document.querySelector(".nav-wrapper");
+               var nav = priorityNav.init({
+                   mainNavWrapper: ".nav-wrapper", // mainnav wrapper selector (must be direct parent from mainNav)
+                   mainNav: ".nav-ul", // mainnav selector. (must be inline-block)
+                   navDropdownLabel: 'test',
+                   navDropdownClassName: "nav__dropdown", // class used for the dropdown.
+                   navDropdownToggleClassName: "nav__dropdown-toggle", // class used for the dropdown toggle.
+               });
+            
+               /**
+                * Initiate priorityNav
+                */
+               var nav2 = priorityNav.init({
+                   mainNavWrapper: ".topnav-wrapper", // mainnav wrapper selector (must be direct parent from mainNav)
+                   mainNav: ".nav-ul", // mainnav selector. (must be inline-block)
+                   navDropdownLabel: 'More',
+                   navDropdownClassName: "nav__dropdown", // class used for the dropdown.
+                   navDropdownToggleClassName: "nav__dropdown-toggle", // class used for the dropdown toggle.
+               });
+            
+            includeHTML();
+        </script>
+    </body>
+</html>

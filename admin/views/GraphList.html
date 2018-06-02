@@ -1,0 +1,53 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Graph Year List</h1>
+        <button type="button" class="btn btn-outline btn-primary pull-right" ng-click="createGraph();">
+            <i class="fa fa-plus"></i> Add Graph</button>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-12">
+        <br>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Graph list
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <div class="dataTable_wrapper">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Year</th>
+                                <th>Deemed Export</th>
+                                <th>Export</th>
+                                <th>Gov/Dom</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="item in Graph track by $index">
+                                <td>{{$index+1}}</td>
+                                <td>{{item.year}}</td>
+                                <td>{{item.deemedExport}}</td>
+                                <td>{{item.export}}</td>
+                                <td>{{item.govdom}}</td>
+                                <td>
+                                    <button type="button" class="btn btn-success" ng-click="editGraph(item._id);">
+                                        <i class="fa fa-edit fa-fw"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-danger" ng-click="deleteGraph(item._id);">
+                                        <i class="fa fa-trash-o"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

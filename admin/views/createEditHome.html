@@ -1,0 +1,122 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h3 class="page-header">Home Sliders</h3>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Basic Form Elements
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form role="form">
+                            <div class="form-group">
+                                <label>Title</label>
+                                <input class="form-control" ng-model="home.title" placeholder="Enter Title">
+                                <!-- <p class="help-block">Example block-level help text here.</p> -->
+                            </div>
+
+                            <div class="form-group">
+                                <label>Descrption</label>
+                                <input class="form-control" ng-model="home.description" placeholder="Enter Description">
+                                <!-- <p class="help-block">Example block-level help text here.</p> -->
+                            </div>
+
+                            <div class="form-group">
+                                <label>Slider Title</label>
+                                <input class="form-control" ng-model="home.sliderTitle" placeholder="Enter Slider Title">
+                                <!-- <p class="help-block">Example block-level help text here.</p> -->
+                            </div>
+
+                            <div class="form-group">
+                                <label>Slider Order</label>
+                                <select class="form-control" ng-model="home.order" placeholder="Enter Slider Order">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                                <!-- <p class="help-block">Example block-level help text here.</p> -->
+                            </div>
+
+                            <hr>
+                            <div class="form-group">
+                                <label>Slider Images</label>
+                                <button type="button" class="btn btn-outline btn-primary pull-right" ng-click="flags.createSlider=true">
+                                    <i class="fa fa-plus"></i> Add Slider Images</button>
+                                <table class="table table-striped" ng-if="flags.createSlider==true">
+                                    <thead>
+                                        <tr>
+                                            <th>Image</th>
+                                            <th>Image Description</th>
+                                            <th>Redirect Page</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <file-upload extensions="extensions" ng-model="slider.image"></file-upload>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" ng-model="slider.imageDescription" placeholder="Enter Image Discription">
+                                            </td>
+                                            <td>
+                                                <input class="form-control" ng-model="slider.redirectPage" placeholder="Enter Redirect Page Name (In lower case)">
+                                            </td>
+                                            <td>
+                                                <button type="submit" class="btn btn-success" ng-click="addSlider(slider);">Add</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <hr>
+                                <table class="table table-striped" ng-if="home.sliderImages.length > 0">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Image</th>
+                                            <th>Image Description</th>
+                                            <th>Redirect Page</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="item in home.sliderImages track by  $index">
+                                            <td>{{$index+1}}</td>
+                                            <td><img ng-src="{{item.image | uploadPath}}" alt="User Avatar" width="150" height="150"></td>
+                                            <td>{{item.imageDescription}}</td>
+                                            <td>{{item.redirectPage}}</td>
+                                            <td>
+                                                <button type="button" class="btn btn-success" ng-click="editSlider($index);">
+                                                    <i class="fa fa-edit fa-fw"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-danger" ng-click="removeSlider($index);">
+                                                    <i class="fa fa-trash-o"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <button type="submit" class="btn btn-success" ng-click="saveHome(home);">Submit</button>
+                            <button type="reset" class="btn btn-primary" ng-click="reset();">Reset</button>
+                            <button class="btn btn-danger" ng-click="goBack();">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>

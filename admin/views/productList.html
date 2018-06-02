@@ -1,0 +1,52 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Product List</h1>
+        <button type="button" class="btn btn-outline btn-primary pull-right" ng-click="createProduct();">
+            <i class="fa fa-plus"></i> Add Product</button>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-12">
+        <br>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Product category list
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <div class="dataTable_wrapper">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Product Name</th>
+                                <th>Category name</th>
+                                <th>Subcategories</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="item in products track by  $index">
+                                <td>{{$index+1}}</td>
+                                <td>{{item.productName}}</td>
+                                <td>{{item.productCategory.categoryName}}</td>
+                                <td>{{item.productSubCategory}}</td>
+                                <td>
+                                    <button type="button" class="btn btn-success" ng-click="editProduct(item._id);">
+                                        <i class="fa fa-edit fa-fw"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-danger" ng-click="deleteProduct(item._id);">
+                                        <i class="fa fa-trash-o"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

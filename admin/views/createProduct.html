@@ -1,0 +1,104 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">{{pageTitle}}</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Basic Form Elements
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form role="form">
+                            <div class="form-group">
+                                <label>Product name</label>
+                                <input class="form-control" ng-model="product.productName" placeholder="Enter text">
+                                <!-- <p class="help-block">Example block-level help text here.</p> -->
+                            </div>
+
+                            <div class="form-group">
+                                <label>strength</label>
+                                <input class="form-control" ng-model="product.strength" placeholder="Enter value">
+                                <!-- <p class="help-block">Example block-level help text here.</p> -->
+                            </div>
+
+                            <div class="form-group">
+                                <label>Therapuetic Use</label>
+                                <input class="form-control" ng-model="product.therapueticUse" placeholder="Enter text">
+                                <!-- <p class="help-block">Example block-level help text here.</p> -->
+                            </div>
+
+                            <div class="form-group">
+                                <label>Pack Presentation</label>
+                                <input class="form-control" ng-model="product.packPresentation" placeholder="Enter text">
+                                <!-- <p class="help-block">Example block-level help text here.</p> -->
+                            </div>
+
+                            <div class="form-group">
+                                <label>DosageForm</label>
+                                <input class="form-control" ng-model="product.dosageForm" placeholder="Enter text">
+                                <!-- <p class="help-block">Example block-level help text here.</p> -->
+                            </div>
+
+                            <div class="form-group">
+                                <label>Pharmacopieal Status</label>
+                                <input class="form-control" ng-model="product.pharmacopiealStatus" placeholder="Enter text">
+                                <!-- <p class="help-block">Example block-level help text here.</p> -->
+                            </div>
+
+                            <div class="form-group">
+                                <label>Generic Name</label>
+                                <input class="form-control" ng-model="product.GenericName" placeholder="Enter text">
+                                <!-- <p class="help-block">Example block-level help text here.</p> -->
+                            </div>
+
+                            <div class="form-group">
+                                <label>FDF Compliance</label>
+                                <input class="form-control" ng-model="product.FDFCompliance" placeholder="Enter text">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Product category</label>
+                                <!-- <select ng-model="product.productCategory" data-ng-change="getSubCategory(x)" ng-options="x.categoryName for x in category">
+                                </select> -->
+
+                                <select name="singleSelect" ng-change="getSubCategory(product.productCategory)" ng-model="product.productCategory">
+                                    <option value="{{x._id}}" ng-repeat="x in category track by $index">{{x.categoryName}}</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Product sub product</label>
+                                <select ng-model="product.productSubCategory" ng-options="x.name for x in subCategory">
+                                </select>
+                                <!-- <select ng-model="product.productSubCategory">
+                                    <option value="{{x.name}}" ng-repeat="x in subCategory track by $index">{{x.name}}</option>
+                                </select> -->
+                            </div>
+
+
+                            <div class="form-group">
+                                <label>File input</label>
+                                <file-upload extensions="extensions" ng-model="product.file"></file-upload>
+                            </div>
+
+
+                            <button type="submit" class="btn btn-default" ng-click="saveProduct(product);">Submit Button</button>
+                            <button type="reset" class="btn btn-default" ng-click="reset();">Reset Button</button>
+                            <button class="btn btn-default" ng-click="goBack();">cancel</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>

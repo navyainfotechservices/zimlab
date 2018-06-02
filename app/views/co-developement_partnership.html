@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<title>ZIM - Zeal & Innovation in Medicine</title>
+        <script>
+            function includeHTML() {
+              var z, i, elmnt, file, xhttp;
+              /*loop through a collection of all HTML elements:*/
+              z = document.getElementsByTagName("*");
+              for (i = 0; i < z.length; i++) {
+            	elmnt = z[i];
+            	/*search for elements with a certain atrribute:*/
+            	file = elmnt.getAttribute("w3-include-html");
+            	if (file) {
+            	  /*make an HTTP request using the attribute value as the file name:*/
+            	  xhttp = new XMLHttpRequest();
+            	  xhttp.onreadystatechange = function() {
+            		if (this.readyState == 4) {
+            		  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+            		  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+            		  /*remove the attribute, and call this function once more:*/
+            		  elmnt.removeAttribute("w3-include-html");
+            		  includeHTML();
+            		}
+            	  }      
+            	  xhttp.open("GET", file, true);
+            	  xhttp.send();
+            	  /*exit the function:*/
+            	  return;
+            	}
+              }
+            };
+        </script>
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom fonts for this template -->
+        <link rel="stylesheet" href="vendor/droid/stylesheet.css">
+        <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
+        <!-- Plugin CSS -->
+        <link href="css/resCarousel.css" rel="stylesheet" type="text/css">
+        <link href="css/accordian.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/dataTables.bootstrap4.min.css">
+        <link rel="stylesheet" href="css/dataTables.responsive.css">
+        <!-- Custom styles for this template -->
+        <link rel="stylesheet" type="text/css" href="css/tabs.css">
+        <link href="css/liteaccordion.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="css/zimlab.min.css">
+        <script src="js/highcharts.js"></script>
+        <!--<script src="https://code.highcharts.com/highcharts-3d.js"></script>
+            <script src="https://code.highcharts.com/modules/exporting.js"></script>
+            <script src="https://code.highcharts.com/modules/export-data.js"></script>-->
+    </head>
+    <body>
+        <div class="firstBlur main-container">
+            <!-- Navigation -->
+            <div class="navbar navbar-expand-lg navbar-light fixed-top">
+			<div class="container">
+				<div class="flyout hidden">
+					<nav>
+					<div class="wrapper resize-drag topnav-wrapper">
+						<ul class="nav-ul">
+						<li><a href="about-us.html">About Us</a></li>
+						<li><a ui-sref="product">Products</a></li>
+						<li><a href="infrastructure.html">Infrastructure</a></li>
+						<li><a href="technology.html">TECHNOLOGY / R&D</a></li>
+						<li><a ui-sref="corporate-information">Corporate Information</a></li>
+						<li><a href="coming-soon.html">Investors</a></li>
+						<li><a href="diversified-customers-countries.html">Diversified Customers & Countries</a></li>
+						<li><a href="co-developement_partnership.html">Co Developement & Partnerships</a></li>
+						<li><a href="career.html">Careers</a></li>
+						<li><a href="https://zimlabs.blogspot.in/" target="_blank">Media Kit</a></li>
+						<li><a href="contact-us.html">Contact US</a></li>
+					  </ul>
+					</div>
+					</nav>
+					</div>
+            </div>
+			<div class="opener hidden" id="mainNav">
+                <nav>
+                    <ul class="nav-ul-1">
+                        <li><a ui-sref="corporate-information">Corporate Information</a></li>
+                        <li><a href="technology.html">TECHNOLOGY / R&D</a></li>
+                        <li><a ui-sref="product">Products</a></li>
+                        <li><a><span class="toggle"></span></a></li>
+                    </ul>
+                </nav>
+				
+				<div class="navbar-brand-white js-scroll-trigger">
+					<a href="index.html"><img src="images/zim-logo-white.png" alt=""/></a>
+				</div>
+				<div class="navbar-brand js-scroll-trigger">
+					<a href="index.html"><img src="images/zim-logo-green.png" alt=""/></a>
+				</div>
+			</div>
+		</div>
+            <!-- End Navigation --> 
+            <!-- Header -->
+            <header class="page-header-banner co-development-banner">
+                <h1 class="white">CO-DEVELOPMENT & PARTNERSHIP</h1>
+            </header>
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 text-right">
+                            <h3 class="green">PARTNER WITH US</h3>
+                        </div>
+                        <div class="col-lg-4 text-justify">
+                            <p>Get a market advantage with cutting-edge technology on your side</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                  <br>
+                  <p class="text-center">ZIM provides end to end support on product development and supplies that include</p>
+                  <br>
+                  <div class="resCarousel carousel-arrows-hide" data-items="1-2-3-4" data-slide="3" data-speed="900" data-animator="lazy" >
+							<div class="resCarousel-inner">
+								<div class="item">
+								    <div class="text-center">
+                                      <div class="image-outer">
+                                          <div class="image"> <img src="images/product-dev-icon.png" alt="product-dev"> </div>
+                                     </div>
+                                    <div class="text">
+                                      <p> Product Developement / Co-Development </p>
+                                    </div>
+                                    </div>
+								</div>
+                                <div class="item">
+								    <div class="image-outer">
+                                      <div class="image"> <img src="images/rnd-testing-icon.png" alt="rnd-testing"> </div>
+                                    </div>
+                                    <div class="text">
+                                      <p> R&D / Technical / Knowhow / Testing / Validtion </p>
+                                    </div>
+								</div>
+                                <div class="item">
+								    <div class="image-outer">
+                                      <div class="image"> <img src="images/registration-icon.png" alt="registration"> </div>
+                                    </div>
+                                    <div class="text">
+                                      <p> Country Specific Registration of Dossiers </p>
+                                    </div>
+								</div>
+                                <div class="item">
+								    <div class="image-outer">
+                                      <div class="image"> <img src="images/manufacturing-and-supplies-icon.png" alt="manufacturing and supplies"> </div>
+                                    </div>
+                                    <div class="text">
+                                      <p> Manufacturing and Supplies </p>
+                                    </div>
+								</div>
+							</div>
+							<button class="btn btn-default leftRs"></button>
+							<button class="btn btn-default rightRs"></button>
+						</div>
+              </div>
+            </section>
+            <section  class="vertical-accordion" id="product-dev">
+                <div class="container">
+                    <div class="flexbox" style="overflow:hidden;">
+                        <div class="columns text-center focus-areas active">
+                            <h3 class="white">FOCUS AREAS</h3>
+                            <div class="info">
+                                <h5 class="white">FOCUS AREAS</h5>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="vert-acc-image"> <img src="images/focus-areas-1.png" alt="search"> </div>
+                                        <p>R&D</p>
+                                        <p> Team of over 111 R&D Personnel <br>
+                                            <br>
+                                            R&D centre is recognised by Department of Scientific and Industrial Research <br>
+                                            <br>
+                                            Approved by the Nagpur University for Ph.D. Programs in Pharmaceutics 
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="vert-acc-image"> <img src="images/focus-areas-2.png" alt="search"> </div>
+                                        <p>Intellectual Property Creation</p>
+                                        <p> 37 patents filed globally with 12 of them filed with the world body (PCT) <br>
+                                            <br>
+                                            Products Registered: 171 <br>
+                                            <br>
+                                            Applied for: 134 <br>
+                                            <br>
+                                            Pipeline: 15 
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="vert-acc-image"> <img src="images/focus-areas-3.png" alt="search"> </div>
+                                        <p>Manufacturing</p>
+                                        <p> State of the art EU-GMP & WHO-GMP certified manufacturing facility <br>
+                                            <br>
+                                            Spread over 125,000 sq. ft. 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="columns text-center tech-platforms">
+                            <h3 class="white">TECHNOLOGY PLATFORMS</h3>
+                            <div class="info">
+                                <h5 class="white">TECHNOLOGY PLATFORMS</h5>
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                        <div class="vert-acc-image"> <img src="images/tech-platform-1.png" alt="search"> </div>
+                                        <p>Drug Release Modification</p>
+                                        <p> Using multiple processes including solvent-less processing </p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="vert-acc-image"> <img src="images/tech-platform-2.png" alt="search"> </div>
+                                        <p>Solubility & Stability Enhancement </p>
+                                        <p> Using co-crystallization, micro emulsification, co-precipitation, inclusion, complexation, etc. </p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="vert-acc-image"> <img src="images/tech-platform-3.png" alt="search"> </div>
+                                        <p>Taste Masking </p>
+                                        <p> Using complexation / polymer based coating, flavour technology </p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="vert-acc-image"> <img src="images/tech-platform-3.png" alt="search"> </div>
+                                        <p>Dosage Form Transformation </p>
+                                        <p> Using Thin Film Technology </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="columns text-center product-portfolio">
+                            <h3 class="white">DIFFERENTIATED PRODUCT PORTFOLIO</h3>
+                            <div class="info">
+                                <h5 class="white">DIFFERENTIATED PRODUCT PORTFOLIO</h5>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="vert-acc-image"> <img src="images/pellets.png" alt="search"> </div>
+                                        <p>Pellets</p>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="vert-acc-image"> <img src="images/taste-masked.png" alt="search"> </div>
+                                        <p>Taste Masked</p>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="vert-acc-image"> <img src="images/dc-granules.png" alt="search"> </div>
+                                        <p>DC Granules</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                        <div class="vert-acc-image"> <img src="images/otf.png" alt="search"> </div>
+                                        <p>Oral Thin Films (OTF)</p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="vert-acc-image"> <img src="images/tablets.png" alt="search"> </div>
+                                        <p>Tablets</p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="vert-acc-image"> <img src="images/capsules.png" alt="search"> </div>
+                                        <p>Capsules</p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="vert-acc-image"> <img src="images/dry-syrups.png" alt="search"> </div>
+                                        <p>Dry Syrups</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="columns text-center customers">
+                            <h3 class="white">CUSTOMERS / PARTNERS</h3>
+                            <div class="info">
+                                <h5 class="white">CUSTOMERS / PARTNERS</h5>
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                        <div class="vert-acc-image"> <img src="images/local-manufacturers.png" alt="search"> </div>
+                                        <p> Local Manufacturers in Pharmerging and ROW</p>
+                                        <p> Who need to introduce high-end products in their portfolio <br>
+                                            <br>
+                                            Seeking brand extensions through novel drug delivery systems 
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="vert-acc-image"> <img src="images/local-distributors.png" alt="search"> </div>
+                                        <p>Local Distributors/Marketing Agents in Pharmerging and ROW</p>
+                                        <p> Who need relatively large basket of products in smaller quantities from a single manufacturing source (reducing trading pipeline) </p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="vert-acc-image"> <img src="images/government.png" alt="search"> </div>
+                                        <p>Governmnet</p>
+                                        <p> Institutional buyers requiring a large basket of products from a common quality manufacturing source, flexibility in offerings to help inventory compression </p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="vert-acc-image"> <img src="images/mnc-pharma.png" alt="search"> </div>
+                                        <p>MNC Pharma / Co-development Out-licensing</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div w3-include-html="views/footer.html"></div>
+        <!--footer--> 
+        <!-- Bootstrap core JavaScript --> 
+        <script src="vendor/jquery/jquery.min.js"></script> 
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
+        <!-- Plugin JavaScript --> 
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script> 
+        <script src="js/resCarousel.js"></script> 
+        <script src="https://cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js"></script> 
+        <script src="https://cdn.datatables.net/plug-ins/f2c75b7247b/integration/bootstrap/3/dataTables.bootstrap.js"></script> 
+        <script src="https://cdn.datatables.net/responsive/1.0.4/js/dataTables.responsive.js"></script>
+        <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+        <script type="text/javascript" src="js/liteaccordion.jquery.js"></script>
+        <!--<script src="js/jquery.bootstrap-responsive-tabs.min.js"></script>-->
+        <script src="js/zimlab.js"></script> 
+        <!-- Custom scripts for this template --> 
+        <script src="js/priority-nav.js"></script> 
+        <script type="text/javascript" src="js/jquery.multipurpose_tabcontent.js"></script> 
+        <!--<script src="js/charts.js"></script> 
+            Plug-in Initialisation--> 
+        <script>
+            var wrapper = document.querySelector(".nav-wrapper");
+               var nav = priorityNav.init({
+                   mainNavWrapper: ".nav-wrapper", // mainnav wrapper selector (must be direct parent from mainNav)
+                   mainNav: ".nav-ul", // mainnav selector. (must be inline-block)
+                   navDropdownLabel: 'test',
+                   navDropdownClassName: "nav__dropdown", // class used for the dropdown.
+                   navDropdownToggleClassName: "nav__dropdown-toggle", // class used for the dropdown toggle.
+               });
+            
+               /**
+                * Initiate priorityNav
+                */
+               var nav2 = priorityNav.init({
+                   mainNavWrapper: ".topnav-wrapper", // mainnav wrapper selector (must be direct parent from mainNav)
+                   mainNav: ".nav-ul", // mainnav selector. (must be inline-block)
+                   navDropdownLabel: 'More',
+                   navDropdownClassName: "nav__dropdown", // class used for the dropdown.
+                   navDropdownToggleClassName: "nav__dropdown-toggle", // class used for the dropdown toggle.
+               });
+            
+            includeHTML();
+        </script>
+    </body>
+</html>
