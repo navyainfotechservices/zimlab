@@ -7,7 +7,7 @@
  * Controller of the zimlabApp
  */
 angular.module('zimlabApp')
-  .controller('MainCtrl', function ($scope, $position, NavigationService) {
+  .controller('MainCtrl', function ($scope, NavigationService) {
     $scope.text = "add it bro";
 
     $scope.pages = [];
