@@ -101,7 +101,6 @@ var model = {
 
     updatePages: function (data, callback) {
         var resObj = {};
-
         Pages.update({ _id: data._id }, data, { new: true }, function (error, updated) {
             if (error || updated == undefined) {
                 console.log("Pages >>> updatePages >>>  error >>> ", error);

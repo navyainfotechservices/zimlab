@@ -216,6 +216,20 @@ angular.module('zimlabApp').factory('NavigationService', function ($http) {
                 data = data.data;
                 callback(data);
             });
+        },
+
+        savePages: function (formData, callback) {
+            $http.post(adminurl + 'Pages/savePages', formData).then(function (data) {
+                data = data.data;
+                callback(data);
+            });
+        },
+
+        updatePages: function (formData, callback) {
+            $http.post(adminurl + 'Pages/updatePages', formData).then(function (data) {
+                data = data.data;
+                callback(data);
+            });
         }
 
     };

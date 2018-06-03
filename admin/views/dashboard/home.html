@@ -38,8 +38,8 @@
                 </button>
             </div>
             <div class="col-md-3" ng-repeat="page in pages" ng-show="!$first">
-                <button class="btn btn-default btn-lg btn-square pageBtn">
-                    <span>{{pages[0].name}}</span>
+                <button class="btn btn-default btn-lg btn-square pageBtn" ng-click="getPluginPage(page)">
+                    <span>{{page.name}}</span>
                 </button>
             </div>
         </div>
