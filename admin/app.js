@@ -27,6 +27,11 @@ angular
     $urlRouterProvider.otherwise('/login');
 
     $stateProvider
+      .state('login', {
+        templateUrl: 'views/pages/login.html',
+        url: '/login',
+        controller: 'LoginCtrl'
+      })
       .state('dashboard', {
         url: '/dashboard',
         templateUrl: 'views/dashboard/main.html',
@@ -71,11 +76,6 @@ angular
           }
         }
       })
-      // .state('login', {
-      //   url: '/login',
-      //   controller: 'LoginCtrl',
-      //   templateUrl: 'views/login.html',
-      // })
       .state('dashboard.home', {
         url: '/home',
         controller: 'MainCtrl',
@@ -96,94 +96,26 @@ angular
           }
         }
       })
-      .state('dashboard.form', {
-        templateUrl: 'views/form.html',
-        url: '/form'
-      })
-      .state('dashboard.blank', {
-        templateUrl: 'views/pages/blank.html',
-        url: '/blank'
-      })
-      .state('login', {
-        templateUrl: 'views/pages/login.html',
-        url: '/login',
-        controller: 'LoginCtrl'
-      })
-      .state('dashboard.chart', {
-        templateUrl: 'views/chart.html',
-        url: '/chart',
-        controller: 'ChartCtrl',
+      // Zim lab navigation
+
+
+      // Page Details 
+      .state('dashboard.pageDetail', {
+        templateUrl: 'views/pageDetail.html',
+        url: '/pageDetail/:id',
+        controller: 'PageDetailCtrl',
         resolve: {
-          loadMyFile: function ($ocLazyLoad) {
+          loadMyFiles: function ($ocLazyLoad) {
             return $ocLazyLoad.load({
-                name: 'chart.js',
-                files: [
-                  '../bower_components/angular-chart.js/dist/angular-chart.min.js',
-                  '../bower_components/angular-chart.js/dist/angular-chart.css'
-                ]
-              }),
-              $ocLazyLoad.load({
-                name: 'zimlabApp',
-                files: ['controllers/chartContoller.js']
-              })
+              name: 'zimlabApp',
+              files: [
+                'controllers/PageDetailCtrl.js',
+                'factories/navigation.js'
+              ]
+            })
           }
         }
       })
-      .state('dashboard.table', {
-        templateUrl: 'views/table.html',
-        url: '/table'
-      })
-      .state('dashboard.leadership', {
-        templateUrl: 'views/ui-elements/leadership.html',
-        url: '/leadership'
-      })
-      .state('dashboard.management', {
-        templateUrl: 'views/ui-elements/management.html',
-        url: '/management'
-      })
-      .state('dashboard.graph', {
-        templateUrl: 'views/ui-elements/graph.html',
-        url: '/graph'
-      })
-      .state('dashboard.rolloverImage', {
-        templateUrl: 'views/ui-elements/rolloverImage.html',
-        url: '/rolloverImage'
-      })
-
-      .state('dashboard.carousel', {
-        templateUrl: 'views/ui-elements/carousel.html',
-        url: '/carousel'
-      })
-
-      .state('dashboard.banner', {
-        templateUrl: 'views/ui-elements/banner.html',
-        url: '/banner'
-      })
-
-      .state('dashboard.heroBanner', {
-        templateUrl: 'views/ui-elements/heroBanner.html',
-        url: '/heroBanner'
-      })
-
-      .state('dashboard.notifications', {
-        templateUrl: 'views/ui-elements/notifications.html',
-        url: '/notifications'
-      })
-      .state('dashboard.typography', {
-        templateUrl: 'views/ui-elements/typography.html',
-        url: '/typography'
-      })
-      .state('dashboard.icons', {
-        templateUrl: 'views/ui-elements/icons.html',
-        url: '/icons'
-      })
-      .state('dashboard.grid', {
-        templateUrl: 'views/ui-elements/grid.html',
-        url: '/grid'
-      })
-
-
-      // Zim lab navigation
 
       //Home Main horizontal sliders
 

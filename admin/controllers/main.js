@@ -29,6 +29,7 @@ angular.module('zimlabApp')
         }
       });
     }
+    
     $scope.getPagesList();
 
     $scope.addPages = function () {
@@ -64,19 +65,21 @@ angular.module('zimlabApp')
 
 
     $scope.getPluginPage = function (page) {
+      console.log("Page ", page)
       $scope.pageObj = page;
+      $state.go('dashboard.pageDetail',{id:page._id});
       // $jStorage.set("pageObj", $scope.pageObj);
-      $scope.pluginModal = $modal.open({
-        templateUrl: 'views/modal/pluginPage.html',
-        scope: $scope,
-        size: 'lg'
-      });
+      // $scope.pluginModal = $modal.open({
+      //   templateUrl: 'views/modal/pluginPage.html',
+      //   scope: $scope,
+      //   size: 'lg'
+      // });
 
-      $scope.pluginModal.result.then(function (selectedItem) {
-        $scope.selected = selectedItem;
-      }, function () {
-        // $log.info('Modal dismissed at: ' + new Date());
-      });
+      // $scope.pluginModal.result.then(function (selectedItem) {
+      //   $scope.selected = selectedItem;
+      // }, function () {
+      //   // $log.info('Modal dismissed at: ' + new Date());
+      // });
     };
 
     //Get Plugin for page
