@@ -1,13 +1,14 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="panel panel-default">
-            <div class="panel-heading">
-                Select Plugin
+            <div class="panel-heading text-center">
                 <select name="repeatSelect" id="repeatSelect" ng-model="plugin" ng-change="getPlugin(plugin)">
+                    <option value="">Select Plugin</option>
                     <option ng-repeat="option in pluginList" value="{{option}}">{{option}}</option>
                 </select>
             </div>
             <div class="panel-body">
+                    <div ng-if="!pluginName" class="text-center"> <h4><b>Select Plugin</b></h4></div>
                 <div ng-include="pluginName" ng-if="isTrue"></div>
                 <!-- /.row (nested) -->
             </div>

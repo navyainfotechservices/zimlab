@@ -73,7 +73,12 @@ var model = {
     getOnePages: function (data, callback) {
         var resObj = {};
 
-        Pages.findOne({ _id: data.id }).exec(function (error, found) {
+        var findObj =  { _id: data.id };
+        if(data.findBy) {
+            findObj = data.findBy
+        }
+
+        Pages.findOne(findObj).exec(function (error, found) {
             if (error || found == undefined) {
                 console.log("Pages >>> getOnePages >>>  error >>> ", error);
                 resObj = {

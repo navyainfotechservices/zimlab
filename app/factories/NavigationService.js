@@ -1,6 +1,6 @@
 angular.module('zimlabApp').factory('NavigationService', function ($http) {
-    var adminurl = "http://localhost:1337/";
-    // var adminurl = "http://104.197.192.46:1337/";
+    // var adminurl = "http://localhost:1337/";
+    var adminurl = "http://104.197.192.46:1337/";
 
     return {
         // getNavigation: function () {
