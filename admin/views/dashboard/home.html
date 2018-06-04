@@ -7,6 +7,10 @@
     .container-margin {
         margin: 0px !important;
     }
+
+    .col-margin-top {
+        margin-top: 30px;
+    }
 </style>
 <div>
     <div class="row">
@@ -27,17 +31,18 @@
 
     <div class="container container-margin">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-3 col-margin-top">
                 <button class="btn btn-default btn-lg btn-square pageBtn" ng-click="addPages();">
-                    <span><i class="fa fa-plus"></i> ADD</span>
+                    <span>
+                        <i class="fa fa-plus"></i> ADD</span>
                 </button>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-margin-top">
                 <button class="btn btn-default btn-lg btn-square pageBtn" ng-click="getPluginPage(pages[0])">
                     <span>{{pages[0].name}}</span>
                 </button>
             </div>
-            <div class="col-md-3" ng-repeat="page in pages" ng-show="!$first">
+            <div class="col-md-3 col-margin-top" ng-repeat="page in pages" ng-show="!$first">
                 <button class="btn btn-default btn-lg btn-square pageBtn" ng-click="getPluginPage(page)">
                     <span>{{page.name}}</span>
                 </button>
