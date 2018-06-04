@@ -20,7 +20,8 @@ angular.module('zimlabApp')
           $scope.pages = data.result;
           console.log("$scope.pages", $scope.pages);
         } else {
-          alert("unable to get pages , please try again");
+          console.log(" unable to get pages , please try again !")
+          // alert("unable to get pages , please try again");
         }
       });
     }
