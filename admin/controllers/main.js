@@ -12,7 +12,7 @@ angular.module('zimlabApp')
 
     $scope.pages = [];
     $scope.isTrue = true;
-    $scope.pluginList = ["Management", "Leadership"];
+    $scope.pluginList = ["Management", "Leadership", "Banner", "Graph", "Rollover Image", "Carousel"];
 
     $scope.getPagesList = function () {
       NavigationService.getPagesList({}, function (data) {
@@ -89,6 +89,26 @@ angular.module('zimlabApp')
           $scope.pluginName = "views/ui-elements/leadership.html";
           break;
 
+        case "Banner":
+          $scope.storeMoreData = [];
+          $scope.pluginName = "views/ui-elements/banner.html";
+          break;
+
+        case "Graph":
+          $scope.storeMoreData = [];
+          $scope.pluginName = "views/ui-elements/graph.html";
+          break;
+
+        case "Rollover Image":
+          $scope.storeMoreData = [];
+          $scope.pluginName = "views/ui-elements/rolloverImage.html";
+          break;
+
+        case "Carousel":
+          $scope.storeMoreData = [];
+          $scope.pluginName = "views/ui-elements/carousel.html";
+          break;
+
         default: console.log("Invalid choice");
       }
     };
@@ -110,17 +130,59 @@ angular.module('zimlabApp')
           $scope.leadership = {};
           break;
 
+
+        case "graph":
+          $scope.isTrue = false;
+          $timeout(function () {
+            $scope.graph = {};
+            $scope.isTrue = true;
+          }, 100);
+          break;
+
+        case "carousel":
+          $scope.isTrue = false;
+          $timeout(function () {
+            $scope.carousel = {};
+            $scope.isTrue = true;
+          }, 100);
+          break;
+
         default: console.log("Invalid choice");
       }
     };
+
+    // $scope.addSubData = function (value, plugin) {
+    //   $scope.storeMoreData.push(value);
+    //   switch (plugin) {
+    //     case "graph":
+    //       $scope.isTrue = false;
+    //       $timeout(function () {
+    //         $scope.management = {};
+    //         $scope.isTrue = true;
+    //       }, 100);
+
+    //       break;
+
+    //     case "Leadership":
+    //       $scope.leadership = {};
+    //       break;
+
+    //     default: console.log("Invalid choice");
+    //   }
+    // };
 
     $scope.saveData = function (value, key) {
       console.log("$scope.pageObj ", $scope.pageObj)
       $scope.storeMoreData.push(value);
       if ($scope.pageObj.plugins) {
-        _.each($scope.storeMoreData, function (n) {
-          $scope.pageObj.plugins[key].push(n)
-        });
+        if ($scope.pageObj.plugins[key]) {
+          _.each($scope.storeMoreData, function (n) {
+            $scope.pageObj.plugins[key].push(n)
+          });
+        } else {
+          $scope.pageObj.plugins[key] = $scope.storeMoreData;
+        }
+
       } else {
         $scope.pageObj.plugins = {};
         $scope.pageObj.plugins[key] = $scope.storeMoreData;
