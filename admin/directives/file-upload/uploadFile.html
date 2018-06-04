@@ -5,7 +5,7 @@
             <span>
                 <i class="fa fa-remove close-file" ng-click="removeFiles($index,model)"></i>
                 <a ng-if="model != 'broken'" href="{{model|uploadPath}}" target="_blank">
-                    <img alt="{{model}}" ng-src="{{model|uploadPath}}" class="img-size-single" />
+                    <img width="125" height="100" alt="{{model}}" ng-src="{{model|uploadPath}}" class="img-size-single" />
                 </a>
             </span>
         </div>
@@ -18,7 +18,7 @@
         <span>
             <i class="fa fa-remove close-file" ng-click="removeFiles($index,file,true)"></i>
             <a ng-if="model != 'broken'" href="{{file|uploadPath}}" target="_blank">
-                <img alt="{{file}}" ng-src="{{file|uploadpPath}}" class="img-size" />
+                <img width="125" height="100" alt="{{file}}" ng-src="{{file|uploadpPath}}" class="img-size" />
             </a>
         </span>
     </div>
