@@ -8,6 +8,10 @@
  */
 angular.module('zimlabApp')
   .controller('MainCtrl', function ($scope, NavigationService, $state, $modal, $timeout) {
+    // if ($.jStorage.get('userDetail') == null) {
+    //   $state.go('login');
+    // } 
+
     $scope.text = "add it bro";
 
     $scope.pages = [];

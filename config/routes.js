@@ -51,7 +51,7 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  'post /test': 'UserController.test',
+  // 'post /test': 'UserController.test',
 
   //Product Page
   'post /saveProduct': 'ProductController.saveProduct',
