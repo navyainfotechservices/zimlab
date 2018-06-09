@@ -22,8 +22,12 @@
                     xhttp = new XMLHttpRequest();
                     xhttp.onreadystatechange = function () {
                         if (this.readyState == 4) {
-                            if (this.status == 200) { elmnt.innerHTML = this.responseText; }
-                            if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                            if (this.status == 200) {
+                                elmnt.innerHTML = this.responseText;
+                            }
+                            if (this.status == 404) {
+                                elmnt.innerHTML = "Page not found.";
+                            }
                             /*remove the attribute, and call this function once more:*/
                             elmnt.removeAttribute("w3-include-html");
                             includeHTML();
@@ -769,101 +773,40 @@
             <h6 class="green text-center">MANAGEMENT COMMITTEE</h6>
             <div class="container">
                 <div class="row">
+                    <!-- mangementInfo1 -->
                     <div class="col-lg-6">
-                        <div class="team-block">
+                        <div class="team-block" ng-repeat="info in management.mangementInfo1">
                             <div class="team-toggle">
-                                <h5>Mr. Zulfiquar Kamal
-                                    <small>(B.Com, FCA)</small>
+                                <h5>{{info.name}}
+                                    <small>{{info.degree}}</small>
                                 </h5>
-                                <p class="green">Director - Finance</p>
+                                <p class="green">{{info.designation}}</p>
                             </div>
                             <div class="team-details">
                                 <div class="image">
-                                    <img width="100%" src="images/zulfi.png" alt="zulfi">
+                                    <img width="100%" ng-src="{{ info.file | uploadPath }}" alt="{{file}}">
                                 </div>
-                                <p>Mr. Zulfiquar Kamal is a chartered accountant and has been associated with the company for
-                                    over 25 years.</p>
-                                <button data-toggle="modal" data-target="#zulfiquarmodal" type="button" class="zim-btn btn">Read More</button>
-                            </div>
-                        </div>
-                        <div class="team-block">
-                            <div class="team-toggle">
-                                <h5>Mr. Prakash Sapkal
-                                    <small>(B.Pharm. MBA)</small>
-                                </h5>
-                                <p class="green">Director Operations</p>
-                            </div>
-                            <div class="team-details">
-                                <div class="image">
-                                    <img width="100%" src="images/prakash.png" alt="zulfi">
-                                </div>
-                                <p>Mr. Prakash Sapkal is a Pharmacy graduate with post-graduation in Business Administration
-                                    and has been associated with the Company for 24 years.</p>
-                                <button data-toggle="modal" data-target="#prakashmodal" type="button" class="zim-btn btn">Read More</button>
-                            </div>
-                        </div>
-                        <div class="team-block">
-                            <div class="team-toggle">
-                                <h5>Mr. VIJAY FUDKE
-                                    <small>(B.Pharm. DMP)</small>
-                                </h5>
-                                <p class="green">Senior Vice President – Technical Services</p>
-                            </div>
-                            <div class="team-details">
-                                <div class="image">
-                                    <img width="100%" src="images/vijay.png" alt="zulfi">
-                                </div>
-                                <p>Mr Vijay Fudke is a pharmacy graduate with an association of more than 20 years with ZIM.</p>
-                                <button data-toggle="modal" data-target="#vijaymodal" type="button" class="zim-btn btn">Read More</button>
+                                <p ng-bind-html="info.writeUp"></p>
+                                <button data-toggle="modal" ng-click="setInfo(info)" data-target="#managementModal" type="button" class="zim-btn btn">Read More</button>
                             </div>
                         </div>
                     </div>
+
+                    <!-- mangementInfo2 -->
                     <div class="col-lg-6">
-                        <div class="team-block">
+                        <div class="team-block" ng-repeat="info in management.mangementInfo2">
                             <div class="team-toggle">
-                                <h5>Mr. Zulfiquar Kamal
-                                    <small>(B.Com, FCA)</small>
+                                <h5>{{info.name}}
+                                    <small>{{info.degree}}</small>
                                 </h5>
-                                <p class="green">Director - Finance</p>
+                                <p class="green">{{info.designation }}</p>
                             </div>
                             <div class="team-details">
                                 <div class="image">
-                                    <img width="100%" src="images/zulfi.png" alt="zulfi">
+                                    <img width="100%" ng-src="{{ info.file | uploadPath }}" alt="{{file}}">
                                 </div>
-                                <p>Mr. Zulfiquar Kamal is a chartered accountant and has been associated with the company for
-                                    over 25 years.</p>
-                                <button data-toggle="modal" data-target="#zulfiquarmodal" type="button" class="zim-btn btn">Read More</button>
-                            </div>
-                        </div>
-                        <div class="team-block">
-                            <div class="team-toggle">
-                                <h5>Mr. Prakash Sapkal
-                                    <small>(B.Pharm. MBA)</small>
-                                </h5>
-                                <p class="green">Director Operations</p>
-                            </div>
-                            <div class="team-details">
-                                <div class="image">
-                                    <img width="100%" src="images/prakash.png" alt="zulfi">
-                                </div>
-                                <p>Mr. Prakash Sapkal is a Pharmacy graduate with post-graduation in Business Administration
-                                    and has been associated with the Company for 24 years.</p>
-                                <button data-toggle="modal" data-target="#prakashmodal" type="button" class="zim-btn btn">Read More</button>
-                            </div>
-                        </div>
-                        <div class="team-block">
-                            <div class="team-toggle">
-                                <h5>Mr. VIJAY FUDKE
-                                    <small>(B.Pharm. DMP)</small>
-                                </h5>
-                                <p class="green">Senior Vice President – Technical Services</p>
-                            </div>
-                            <div class="team-details">
-                                <div class="image">
-                                    <img width="100%" src="images/vijay.png" alt="zulfi">
-                                </div>
-                                <p>Mr Vijay Fudke is a pharmacy graduate with an association of more than 20 years with ZIM.</p>
-                                <button data-toggle="modal" data-target="#vijaymodal" type="button" class="zim-btn btn">Read More</button>
+                                <p ng-bind-html="info.writeUp"></p>
+                                <button data-toggle="modal" ng-click="setInfo(info)" data-target="#managementModal" type="button" class="zim-btn btn">Read More</button>
                             </div>
                         </div>
                     </div>
@@ -899,18 +842,18 @@
             <div class="container">
                 <div class="tab_wrapper tab_wrapper_2 first_tab">
                     <ul class="tab_list">
-                        <li class="active">Financial Year {{firstFinancialYearGraph}}</li>
-                        <li>Financial Year {{secondFinancialYearGraph}}</li>
+                        <li class="active" ng-repeat="year in graphYears">Financial Year {{year}}</li>
+                        <!-- <li>Financial Year {{secondFinancialYearGraph}}</li> -->
                     </ul>
-                    <div class="content_wrapper" ng-if="financialYearChart">
-                        <div class="tab_content active">
-                            <hc-pie-chart data="financialYearChart.one" title="Financial Year {{firstFinancialYearGraph}}"></hc-pie-chart>
+                    <div class="content_wrapper">
+                        <div class="tab_content active" ng-repeat="graph in graphData">
+                            <hc-pie-chart data="graph.data" title="Financial Year {{graph.year}}"></hc-pie-chart>
                             <!-- <img class="img-fluid" src="images/fy14.png" alt="" />  -->
                         </div>
-                        <div class="tab_content">
-                            <hc-pie-chart data="financialYearChart.two" title="Financial Year {{secondFinancialYearGraph}}"></hc-pie-chart>
+                        <!-- <div class="tab_content">
+                            <hc-pie-chart data="financialYearChart.two" title="Financial Year {{secondFinancialYearGraph}}"></hc-pie-chart> -->
                             <!-- <img class="img-fluid" src="images/fy17.png" alt="" />  -->
-                        </div>
+                         <!-- </div> -->
                     </div>
                 </div>
             </div>
@@ -1562,49 +1505,6 @@
             </div>
         </div>
     </div>
-    <div class="modal fade text-center modals" id="zulfiquarmodal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modalc-content">
-                    <img src="images/zulfiquar.png">
-                    <h1>ZULFIQUAR KAMAL</h1>
-                    <p>(B.Com. FCA)</p>
-                    <p>Director - Finance</p>
-                    <p class="desc">A chartered accountant, Zulfiquar Kamal has been associated with the company for over 25 years. He has
-                        been on the Board of Directors since 1991. With his financial acumen, refined over an experience
-                        of more than three decades, he brings to the table the financial discipline and control necessary
-                        for a growing organization like ZIM. In his current role as Director – Finance, Mr. Kamal oversees
-                        the commercial operations of the company. He envisions ZIM to be a financially efficient organization
-                        known for its operational efficiencies and technological process.</p>
-                    <button type="button" class="btn" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade text-center modals" id="prakashmodal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modalc-content">
-                    <img src="images/prakash.png">
-                    <h1>PRAKASH SAPKAL</h1>
-                    <p>(B.Pharm. MBA)</p>
-                    <p>Director - Operations</p>
-                    <p class="desc">Mr. Prakash Sapkal is a Pharmacy graduate with post-graduation in Business Administration. He is associated
-                        with the Company for 24 years starting his career as Assistant Chemist. During all these years he
-                        has handled key operations in various capacities like Production Supervisor, Production Manager and
-                        Vice President – Operations. His major contribution has been in assembling a team that has brought
-                        the vision of ZIM to life.</p>
-                    <button type="button" class="btn" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="modal fade text-center modals" id="nirajmodal">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -1652,7 +1552,96 @@
             </div>
         </div>
     </div>
-    <div class="modal fade text-center modals" id="vijaymodal">
+    <div class="modal fade text-center modals" id="pradeepmodal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modalc-content">
+                    <img src="images/pradeep.png">
+                    <h1>PRADEEP KATARIA</h1>
+                    <p>(M.Pharm)</p>
+                    <p>Senior Vice President – Operations</p>
+                    <p class="desc">Mr Pradeep Kataria is a postgraduate in pharmacy with an association of more than 21 years with the organization.
+                        Having spent his initial professional years in the production department of Ranbaxy Limited, Mr Kataria
+                        joined ZIM as Production Supervisor in 1995. He has been a hands-on leader of the Operations team
+                        and has been involved in successful scale-ups of pellets and taste-masking technologies developed
+                        in R&D. He has also been a meticulous administrator in developing, maintaining and managing the in
+                        accordance with the high standards required for various accreditations. In his current role as Senior
+                        Vice President – Operations, Mr Kataria, with his problem-solving and administration skills, looks
+                        after day-to-day activities of the plant, including manufacturing, external audits and internal coordination
+                        amongst operational departments.</p>
+                    <button type="button" class="btn" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Management modal -->
+    <div class="modal fade text-center modals" id="managementModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modalc-content">
+                    <img ng-src="{{ managementInfo.file | uploadPath }}">
+                    <h1>{{managementInfo.name }}</h1>
+                    <p>{{managementInfo.degree }}</p>
+                    <p ng-bind-html="managementInfo.designation"></p>
+                    <p ng-bind-html="managementInfo.writeUpDetail"></p>
+                    <button type="button" class="btn" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div class="modal fade text-center modals" id="zulfiquarmodal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modalc-content">
+                    <img src="images/zulfiquar.png">
+                    <h1>ZULFIQUAR KAMAL</h1>
+                    <p>(B.Com. FCA)</p>
+                    <p>Director - Finance</p>
+                    <p class="desc">A chartered accountant, Zulfiquar Kamal has been associated with the company for over 25 years. He has
+                        been on the Board of Directors since 1991. With his financial acumen, refined over an experience
+                        of more than three decades, he brings to the table the financial discipline and control necessary
+                        for a growing organization like ZIM. In his current role as Director – Finance, Mr. Kamal oversees
+                        the commercial operations of the company. He envisions ZIM to be a financially efficient organization
+                        known for its operational efficiencies and technological process.</p>
+                    <button type="button" class="btn" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade text-center modals" id="prakashmodal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modalc-content">
+                    <img src="images/prakash.png">
+                    <h1>PRAKASH SAPKAL</h1>
+                    <p>(B.Pharm. MBA)</p>
+                    <p>Director - Operations</p>
+                    <p class="desc">Mr. Prakash Sapkal is a Pharmacy graduate with post-graduation in Business Administration. He is associated
+                        with the Company for 24 years starting his career as Assistant Chemist. During all these years he
+                        has handled key operations in various capacities like Production Supervisor, Production Manager and
+                        Vice President – Operations. His major contribution has been in assembling a team that has brought
+                        the vision of ZIM to life.</p>
+                    <button type="button" class="btn" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- <div class="modal fade text-center modals" id="vijaymodal">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -1680,32 +1669,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="modal fade text-center modals" id="pradeepmodal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modalc-content">
-                    <img src="images/pradeep.png">
-                    <h1>PRADEEP KATARIA</h1>
-                    <p>(M.Pharm)</p>
-                    <p>Senior Vice President – Operations</p>
-                    <p class="desc">Mr Pradeep Kataria is a postgraduate in pharmacy with an association of more than 21 years with the organization.
-                        Having spent his initial professional years in the production department of Ranbaxy Limited, Mr Kataria
-                        joined ZIM as Production Supervisor in 1995. He has been a hands-on leader of the Operations team
-                        and has been involved in successful scale-ups of pellets and taste-masking technologies developed
-                        in R&D. He has also been a meticulous administrator in developing, maintaining and managing the in
-                        accordance with the high standards required for various accreditations. In his current role as Senior
-                        Vice President – Operations, Mr Kataria, with his problem-solving and administration skills, looks
-                        after day-to-day activities of the plant, including manufacturing, external audits and internal coordination
-                        amongst operational departments.</p>
-                    <button type="button" class="btn" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    </div> -->
+
     <!--END LEADERSHIP MODALS-->
     <div w3-include-html="views/footer.html"></div>
     <!--footer-->

@@ -32,15 +32,19 @@ angular.module('zimlabApp')
     
     $scope.getPagesList();
 
+   $scope.closeModal= function() {
+    $scope.modalInstance.dismiss();
+   }
+
     $scope.addPages = function () {
       // $scope.pages.push({});
-      var modalInstance = $modal.open({
+      $scope.modalInstance = $modal.open({
         templateUrl: 'views/modal/pageName.html',
         scope: $scope,
         size: 'lg'
       });
 
-      modalInstance.result.then(function (selectedItem) {
+      $scope.modalInstance.result.then(function (selectedItem) {
         $scope.selected = selectedItem;
       }, function () {
         // $log.info('Modal dismissed at: ' + new Date());
@@ -52,6 +56,7 @@ angular.module('zimlabApp')
         if (data.statusCode == 0) {
           $scope.getPagesList();
           $state.reload();
+          $scope.closeModal();
           // console.log("$scope.pages", $scope.pages);
         } else {
           alert("unable to get pages , please try again");
