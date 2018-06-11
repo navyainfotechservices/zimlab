@@ -1,0 +1,64 @@
+<style>
+    .ta-editor {
+        min-height: 300px;
+        height: auto;
+        overflow: auto;
+        font-family: inherit;
+        font-size: 100%;
+    }
+</style>
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Edit Blog</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Basic Form Elements
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form role="form">
+                            <div class="form-group">
+                                <label>Blog name</label>
+                                <input class="form-control" ng-model="blog.name" placeholder="Enter text">
+                                <!-- <p class="help-block">Example block-level help text here.</p> -->
+                            </div>
+                            <div text-angular="text-angular" name="htmlcontent" ng-model="blog.document" ta-disabled='disabled'></div>
+
+
+
+                            <div class="form-group">
+                                <label>Add Tags</label>
+
+                                <input type="text" class="form-control" placeholder="Enter text" name="addTags" ng-model="tags" />
+                                <button type="button" class="btn btn-success pull-right" ng-click="addTags();">
+                                    Add
+                                </button>
+
+                                <ul class="ul-cat">
+                                    <li ng-repeat="item in blog.tags" class="{'fadeOut' : item.done} li-cat">
+                                        <span class="fa fa-close" ng-click="deleteTags($index)"></span>
+                                        <span>{{item.name}}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button type="submit" class="btn btn-success" ng-click="updateBlog(blog);">Submit</button>
+                            <button type="reset" class="btn btn-primary" ng-click="reset();">Reset</button>
+                            <button class="btn btn-danger" ng-click="goBack();">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>

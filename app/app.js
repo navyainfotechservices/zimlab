@@ -133,4 +133,22 @@ angular
         }
       })
 
+      .state('blog', {
+        url: '/blog',
+        controller: 'BlogCtrl',
+        templateUrl: 'views/blog.html',
+        resolve: {
+          loadMyFiles: function ($ocLazyLoad) {
+            return $ocLazyLoad.load({
+              name: 'zimlabApp',
+              files: [
+                'controllers/BlogCtrl.js',
+                'factories/NavigationService.js',
+                'services/CrudService.js',
+              ]
+            })
+          }
+        }
+      })
+
   }]);

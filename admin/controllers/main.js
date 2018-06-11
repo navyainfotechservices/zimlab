@@ -16,7 +16,7 @@ angular.module('zimlabApp')
 
     $scope.pages = [];
     $scope.isTrue = true;
-    $scope.pluginList = ["Management", "Leadership", "Banner", "Graph", "Rollover Image", "Carousel"];
+    $scope.pluginList = ["Management", "Leadership", "Banner", "Graph", "Rollover Image", "Carousel", "Video Link"];
 
     $scope.getPagesList = function () {
       NavigationService.getPagesList({}, function (data) {
@@ -29,12 +29,12 @@ angular.module('zimlabApp')
         }
       });
     }
-    
+
     $scope.getPagesList();
 
-   $scope.closeModal= function() {
-    $scope.modalInstance.dismiss();
-   }
+    $scope.closeModal = function () {
+      $scope.modalInstance.dismiss();
+    }
 
     $scope.addPages = function () {
       // $scope.pages.push({});
@@ -72,7 +72,7 @@ angular.module('zimlabApp')
     $scope.getPluginPage = function (page) {
       console.log("Page ", page)
       $scope.pageObj = page;
-      $state.go('dashboard.pageDetail',{id:page._id});
+      $state.go('dashboard.pageDetail', { id: page._id });
       // $jStorage.set("pageObj", $scope.pageObj);
       // $scope.pluginModal = $modal.open({
       //   templateUrl: 'views/modal/pluginPage.html',

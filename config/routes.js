@@ -97,4 +97,13 @@ module.exports.routes = {
   'post /updatePages': 'PagesController.updatePages',
   'post /deletePages': 'PagesController.deletePages',
 
+
+  //Blog
+  'post /saveBlog': 'BlogController.saveBlog',
+  'post /getBlogList': 'BlogController.getBlogList',
+  'post /getOneBlog': 'BlogController.getOneBlog',
+  'post /updateBlog': 'BlogController.updateBlog',
+  'post /deleteBlog': 'BlogController.deleteBlog',
+
+
 };

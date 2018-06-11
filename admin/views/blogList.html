@@ -1,0 +1,50 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Blog List</h1>
+        <button type="button" class="btn btn-outline btn-primary pull-right" ng-click="createBlog();">
+            <i class="fa fa-plus"></i> Add Blog</button>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-12">
+        <br>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Blog list
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <div class="dataTable_wrapper">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Blog Name</th>
+                                <th>Created Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="item in Blogs track by $index">
+                                <td>{{$index+1}}</td>
+                                <td>{{item.name}}</td>
+                                <td>{{item.createdAt | date:'dd-MM-yyyy'}}</td>
+                                <td>
+                                    <button type="button" class="btn btn-success" ng-click="editBlog(item._id);">
+                                        <i class="fa fa-edit fa-fw"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-danger" ng-click="deleteBlog(item._id);">
+                                        <i class="fa fa-trash-o"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

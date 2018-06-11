@@ -15,7 +15,7 @@ angular.module('zimlabApp')
 
         $scope.pages = [];
         $scope.isTrue = true;
-        $scope.pluginList = ["Management", "Leadership", "Banner", "Graph", "Rollover Image", "Carousel"];
+        $scope.pluginList = ["Management", "Leadership", "Banner", "Graph", "Rollover Image", "Carousel", "Video Link"];
 
         //Function to get product categories
         $scope.getOnePage = function () {
@@ -88,33 +88,40 @@ angular.module('zimlabApp')
                 case "leadership":
                     $scope.storeMoreData = [];
                     $scope.leadership = val1;
-                    $scope.pluginName = "views/ui-elements/leadership.html";
+                    $scope.pluginName = "views/ui-elements/leadershipEdit.html";
                     break;
 
                 case "banner":
                     $scope.storeMoreData = [];
                     $scope.banner = val1;
-                    $scope.pluginName = "views/ui-elements/banner.html";
+                    $scope.pluginName = "views/ui-elements/bannerEdit.html";
                     break;
 
                 case "graph":
                     $scope.storeMoreData = [];
                     $scope.graph = val1;
                     $scope.addMoreDataArray = [];
-                    $scope.pluginName = "views/ui-elements/graph.html";
+                    $scope.pluginName = "views/ui-elements/graphEdit.html";
                     break;
 
                 case "rolloverImage":
                     $scope.storeMoreData = [];
                     $scope.rolloverImage = val1;
-                    $scope.pluginName = "views/ui-elements/rolloverImage.html";
+                    $scope.pluginName = "views/ui-elements/rolloverImageEdit.html";
                     break;
 
                 case "carousel":
                     $scope.storeMoreData = [];
                     $scope.addMoreDataArray = [];
                     $scope.carousel = val1;
-                    $scope.pluginName = "views/ui-elements/carousel.html";
+                    $scope.pluginName = "views/ui-elements/carouselEdit.html";
+                    break;
+
+                case "videoLink":
+                    $scope.storeMoreData = [];
+                    $scope.addMoreDataArray = [];
+                    $scope.videoLink = val1;
+                    $scope.pluginName = "views/ui-elements/videoLinkEdit.html";
                     break;
 
                 default:
@@ -261,6 +268,12 @@ angular.module('zimlabApp')
                     $scope.storeMoreData = [];
                     $scope.carousel = {};
                     $scope.pluginName = "views/ui-elements/carousel.html";
+                    break;
+
+                case "Video Link":
+                    $scope.storeMoreData = [];
+                    $scope.carousel = {};
+                    $scope.pluginName = "views/ui-elements/videoLink.html";
                     break;
 
                 default:

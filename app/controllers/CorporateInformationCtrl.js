@@ -7,7 +7,7 @@
  * Controller of the zimlabApp
  */
 angular.module('zimlabApp')
-    .controller('CorporateInformationCtrl', function CorporateInformationCtrl($scope, NavigationService,$sce) {
+    .controller('CorporateInformationCtrl', function CorporateInformationCtrl($scope, NavigationService, $sce) {
 
         // Financial year high chart details.
         $scope.corporateInfoObj = {};
@@ -21,80 +21,80 @@ angular.module('zimlabApp')
         //     NavigationService.getGraphList({}, function (data) {
         //         // console.log("graph data", data.result[0].deemedExport);
         //         if (data.statusCode == 0) {
-                    $scope.financialYearChart = {};
-                    $scope.financialYearChart.one = [{
-                        name: 'Deemed Export',
-                        y: 40,
-                        selected: true
-                    }, {
-                        name: 'Gov/ Dom.',
-                        y: 40
-                    }, {
-                        name: 'Export',
-                        y: 20
-                    }];
+        $scope.financialYearChart = {};
+        $scope.financialYearChart.one = [{
+            name: 'Deemed Export',
+            y: 40,
+            selected: true
+        }, {
+            name: 'Gov/ Dom.',
+            y: 40
+        }, {
+            name: 'Export',
+            y: 20
+        }];
 
-                    $scope.financialYearChart.two = [{
-                        name: 'Deemed Export',
-                        y: 20,
-                        selected: true
-                    }, {
-                        name: 'Gov/ Dom.',
-                        y: 40
-                    }, {
-                        name: 'Export',
-                        y: 40
-                    }];
+        $scope.financialYearChart.two = [{
+            name: 'Deemed Export',
+            y: 20,
+            selected: true
+        }, {
+            name: 'Gov/ Dom.',
+            y: 40
+        }, {
+            name: 'Export',
+            y: 40
+        }];
 
-                    $scope.firstFinancialYearGraph = 2017;
-                    $scope.secondFinancialYearGraph = 2018;
-                // }
+        $scope.firstFinancialYearGraph = 2017;
+        $scope.secondFinancialYearGraph = 2018;
+        // }
         //     });
         // };
 
         // $scope.getGraphList();
 
         $scope.getCorporateInfo = function () {
-                NavigationService.apiCall('pages/getOnePages', {
-                    findBy:{name:"Corporate Info"}
-                }, function (data) {
-                    if (data.statusCode == 0) {
-                        // console.log("corpporate info : ",corporateInfoObj);
-                        _.map(data.result.plugins.graph,function(val) {
-                            var graphObj = {
-                                data: [{
-                                    name: 'Deemed Export',
-                                    y: val.deemedExport,
-                                    selected: true
-                                }, {
-                                    name: 'Gov/ Dom.',
-                                    y: val.govdom
-                                }, {
-                                    name: 'Export',
-                                    y: val.export
-                                }],
-                                year: val.year
-                            };
-                            $scope.graphData.push(graphObj);
-                            $scope.graphYears.push(val.year);
-                        });
-                        _.map(data.result.plugins.management,function(val) {
-                            val.writeUp = $sce.trustAsHtml(val.writeUp);
-                            val.writeUpDetail = $sce.trustAsHtml(val.writeUpDetail);
-                        })
-                        $scope.corporateInfoObj = data.result;
-                        var managementPluginArr =_.chunk(data.result.plugins.management,3);
-                        $scope.management.mangementInfo1 = managementPluginArr[0];
-                        $scope.management.mangementInfo2 = managementPluginArr[1];
-                        console.log(" $scope $scope.managementInfo = {};",$scope.management);
-                    } else if (data.statusCode == 2) {
-                        // alert("no date found");
-                        $scope.corporateInfoObj = {};
-                    } else if (data.statusCode == 1) {
-                        console.log(" getCorporateInfo error");
-                        // alert("error");
-                    }
-                });
+            NavigationService.apiCall('pages/getOnePages', {
+                findBy: { name: "Corporate Info" }
+            }, function (data) {
+                if (data.statusCode == 0) {
+                    // console.log("corpporate info : ",corporateInfoObj);
+                    _.map(data.result.plugins.graph, function (val) {
+                        var graphObj = {
+                            data: [{
+                                name: 'Deemed Export',
+                                y: val.deemedExport,
+                                selected: true
+                            }, {
+                                name: 'Gov/ Dom.',
+                                y: val.govdom
+                            }, {
+                                name: 'Export',
+                                y: val.export
+                            }],
+                            year: val.year
+                        };
+                        $scope.graphData.push(graphObj);
+                        $scope.graphYears.push(val.year);
+                    });
+                    _.map(data.result.plugins.management, function (val) {
+                        val.writeUp = $sce.trustAsHtml(val.writeUp);
+                        val.writeUpDetail = $sce.trustAsHtml(val.writeUpDetail);
+                    })
+                    $scope.corporateInfoObj = data.result;
+                    var managementPluginArr = _.chunk(data.result.plugins.management, 3);
+                    $scope.management.mangementInfo1 = managementPluginArr[0];
+                    $scope.management.mangementInfo2 = managementPluginArr[1];
+                    console.log(" $scope $scope.managementInfo = {};", $scope.management);
+                } else if (data.statusCode == 2) {
+                    // alert("no date found");
+                    $scope.corporateInfoObj = {};
+                } else if (data.statusCode == 1) {
+                    console.log(" getCorporateInfo error");
+                    // alert("error");
+                }
+            });
         };
 
         $scope.getCorporateInfo();
@@ -132,7 +132,7 @@ angular.module('zimlabApp')
 
         $scope.getCurrentFinancialYear();
 
-        $scope.setInfo = function(info){
+        $scope.setInfo = function (info) {
             $scope.managementInfo = info;
         }
 

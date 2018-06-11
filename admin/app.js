@@ -14,7 +14,8 @@ angular
     'ui.bootstrap',
     // 'ui.router.modal',
     'angular-loading-bar',
-    'toastr'
+    'toastr',
+    'textAngular'
   ])
   .config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', function ($stateProvider, $urlRouterProvider, $ocLazyLoadProvider) {
 
@@ -38,15 +39,15 @@ angular
         resolve: {
           loadMyDirectives: function ($ocLazyLoad) {
             return $ocLazyLoad.load({
-                name: 'zimlabApp',
-                files: [
-                  'js/sb-admin-2.js',
-                  'directives/header/header.js',
-                  'directives/header/header-notification/header-notification.js',
-                  'directives/sidebar/sidebar.js',
-                  'directives/sidebar/sidebar-search/sidebar-search.js'
-                ]
-              }),
+              name: 'zimlabApp',
+              files: [
+                'js/sb-admin-2.js',
+                'directives/header/header.js',
+                'directives/header/header-notification/header-notification.js',
+                'directives/sidebar/sidebar.js',
+                'directives/sidebar/sidebar-search/sidebar-search.js'
+              ]
+            }),
               $ocLazyLoad.load({
                 name: 'toggle-switch',
                 files: ["../bower_components/angular-toggle-switch/angular-toggle-switch.min.js",
@@ -110,6 +111,58 @@ angular
               name: 'zimlabApp',
               files: [
                 'controllers/PageDetailCtrl.js',
+                'factories/navigation.js'
+              ]
+            })
+          }
+        }
+      })
+
+      // Graph
+      .state('dashboard.blogList', {
+        templateUrl: 'views/blogList.html',
+        url: '/blogList',
+        controller: 'BlogListCtrl',
+        resolve: {
+          loadMyFiles: function ($ocLazyLoad) {
+            return $ocLazyLoad.load({
+              name: 'zimlabApp',
+              files: [
+                'controllers/BlogListCtrl.js',
+                'factories/navigation.js'
+              ]
+            })
+          }
+        }
+      })
+
+      .state('dashboard.createBlog', {
+        templateUrl: 'views/createBlog.html',
+        url: '/createBlog',
+        controller: 'CreateBlogCtrl',
+        resolve: {
+          loadMyFiles: function ($ocLazyLoad) {
+            return $ocLazyLoad.load({
+              name: 'zimlabApp',
+              files: [
+                'controllers/CreateBlogCtrl.js',
+                'factories/navigation.js'
+              ]
+            })
+          }
+        }
+      })
+
+      .state('dashboard.editBlog', {
+        templateUrl: 'views/editBlog.html',
+        url: '/editBlog/:id',
+        controller: 'EditBlogCtrl',
+        resolve: {
+          loadMyFiles: function ($ocLazyLoad) {
+            return $ocLazyLoad.load({
+              name: 'zimlabApp',
+              files: [
+                'controllers/EditBlogCtrl.js',
                 'factories/navigation.js'
               ]
             })

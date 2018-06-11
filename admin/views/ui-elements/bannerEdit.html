@@ -1,0 +1,48 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h4 class="page-header">Banner</h4>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Basic Form Elements
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form role="form">
+                            <div class="form-group">
+                                <label>Headline</label>
+                                <input class="form-control" ng-model="banner.headline" placeholder="Enter text">
+                                <!-- <p class="help-block">Example block-level help text here.</p> -->
+                            </div>
+
+                            <div class="form-group">
+                                <label>Body Text</label>
+                                <input class="form-control" ng-model="banner.bodyText" placeholder="Enter text">
+                                <!-- <p class="help-block">Example block-level help text here.</p> -->
+                            </div>
+
+                            <div class="form-group">
+                                <label>Upload File</label>
+                                <file-upload extensions="extensions" ng-model="banner.file"></file-upload>
+                            </div>
+
+                            <button type="submit" class="btn btn-success" ng-click="updateData(banner,'banner');">Submit</button>
+                            <button type="reset" class="btn btn-primary" ng-click="reset();">Reset</button>
+                            <button class="btn btn-danger" ng-click="goBack();">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
