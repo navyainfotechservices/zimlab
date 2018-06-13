@@ -15,7 +15,7 @@ angular.module('zimlabApp')
         var fileType = _.toLower(input.split(".").pop());
         console.log("Image Extension : ",fileType);
         if (fileType == 'jpg' || fileType == 'jpeg' || fileType == 'png' || fileType == 'tif') {
-          return 'https://storage.googleapis.com/zim-lab/' + input;
+          return 'https://storage.googleapis.com/zimlab/' + input;
         } else if (fileType == ".docx") {
           return "images/extensions/doc.png";
         } else {
