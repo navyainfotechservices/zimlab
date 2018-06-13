@@ -2,8 +2,8 @@
 
 //- Here GCS = (Google Cloud Storage)
 var async = require('neo-async');
-// var BUCKET_NAME = 'zimlab'; //- Google cloud storage bucket name
-var BUCKET_NAME = 'zim-lab'; //- Google cloud storage bucket name
+var BUCKET_NAME = 'zimlab'; //- Google cloud storage bucket name
+//var BUCKET_NAME = 'zim-lab'; //- Google cloud storage bucket name
 var path = require('path'); //- Node file uploading path of server
 var Promise = require('bluebird');
 var GoogleCloudStorage = Promise.promisifyAll(require('@google-cloud/storage'));
