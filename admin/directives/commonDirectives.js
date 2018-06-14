@@ -62,7 +62,9 @@ angular.module('zimlabApp')
                     scope.errorFiles = [];
                     //var uploadPath = "http://104.197.192.46:1337/Config/uploadFiles";
                     // var uploadPath = "http://localhost:1337/Config/uploadFiles";
-                    var uploadPath = "http://35.198.244.0:1337/Config/uploadFiles";
+                    // var uploadPath = "http://35.198.244.0:1337/Config/uploadFiles";
+                    var uploadPath = "http://35.200.192.53:1337/Config/uploadFiles";
+                    
                     scope.url = uploadPath;
                     if (scope.localUpload == true) {
                         scope.url = localUploadPath;
