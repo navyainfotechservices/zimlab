@@ -88,7 +88,7 @@ angular
               files: [
                 'controllers/HomeCtrl.js',
                 'factories/NavigationService.js',
-                'services/CrudService.js',
+                'services/crudService.js',
                 'services/HomeService.js'
               ]
             })
@@ -107,7 +107,7 @@ angular
               files: [
                 'controllers/ProductCtrl.js',
                 'factories/NavigationService.js',
-                'services/CrudService.js',
+                'services/crudService.js',
                 'services/ProductService.js'
               ]
             })
@@ -126,7 +126,7 @@ angular
               files: [
                 'controllers/CorporateInformationCtrl.js',
                 'factories/NavigationService.js',
-                'services/CrudService.js',
+                'services/crudService.js',
               ]
             })
           }
@@ -144,7 +144,7 @@ angular
               files: [
                 'controllers/BlogCtrl.js',
                 'factories/NavigationService.js',
-                'services/CrudService.js',
+                'services/crudService.js',
               ]
             })
           }
